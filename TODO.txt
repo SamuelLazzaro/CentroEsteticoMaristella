@@ -1,0 +1,13 @@
+- Mantenere il background-color dell'elemento selezionato (es. TRATTAMENTI VISO)
+- Inserire video in "autoplay muted loop"
+- Inserire immagini
+- Inserire sezione "il negozio" oppure "centro estetico"
+- Inserire elenco macchinari
+- Inserire elenco prodotti
+- Inserire .slideToggle() jQuery per pulsante NAVBAR formato telefonino, vedere anche .fadeToggle() se può essere utile per alcuni elementi.
+- Spostare il <footer> dopo il </body>
+- come ottenere la geolocalizzazione dell'utente: https://www.sanwebe.com/2016/04/get-current-location-of-user-using-jquery
+- Sostituire if($(this).width() <= 913){  con la visibilità del pulsante MENU
+- Se non riesce a caricare l'immagine di Google Maps per assenza di internet inserire un rettangolo con una scritta
+
+
