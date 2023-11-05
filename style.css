@@ -1,0 +1,487 @@
+body {
+    background-color: #F9F5F6;
+    font-family: 'Alice', serif;
+    margin: 10px;
+}
+
+#title_div {
+    color: #ff80ae;
+    /* #f579a6; */
+    /* #ff80ae */
+    /* #ef3378 */
+    /* #f096b7 */
+    text-align: center;
+    margin-top: 15px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;   
+}
+
+#title_div p {
+    margin-top: 0px;
+}
+
+h1 {
+    padding: 30px;
+    border: 7px solid;
+    border-radius: 50%;
+    display: inline-flex;
+    font-weight: bold;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+/*  -------------------------   */
+/*          BARRA MENU          */
+/*  -------------------------   */
+.menu_bar_div {
+    color: #A555EC;
+    background-color: #F8E8EE;
+    padding: 0px;
+    font-size: 14px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+
+/*  Display pc / laptop / ipad  */
+@media (min-width: 950px){
+    #menu_button_div{
+        /* Per non mostrare il pulsante menu nella navigation bar quando ho uno schermo piu' grande di 481px */
+        display: none;
+    }
+
+    .phone_nav_bar_div {
+        display: none;
+    }
+
+    .laptop_nav_bar_div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .laptop_ul {
+        list-style: none;
+        padding: 0px;   /* per mantenere centrati i box rispetto al div */
+        margin: 0px 50px;
+        text-align: center;
+    }
+    
+    .laptop_ul li {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 0px;
+    }
+    
+    .laptop_ul li:hover{
+        color: #F9F5F6;
+        background-color: #bd8de6;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .laptop_ul a {
+        text-decoration: none;
+        color: #A555EC
+    }
+
+    #last_line_laptop_nav_bar_div {
+        display: block;
+    }
+
+}
+
+
+/*  Display Cellulari   */
+@media (max-width: 949px){
+    /* Per non mostrare la lista menu nella navigation bar quando ho uno schermo piu' piccolo di 480px */
+    .laptop_nav_bar_div{
+        display: none;
+    }
+
+    .laptop_ul {
+        display: none;
+    }
+
+    .menu_bar_div {
+        padding: 10px 10px;
+        /* Uso z-index: 2; per mantenere il div del .menu_bar_div al di sopra sia del .navbar_background sia del .content_div*/
+        z-index: 2;
+    }
+
+    .navbar_background {
+        background-color: #F9F5F6;
+        width: 100vw;
+        height: 50px;
+        visibility: hidden;
+        /* Uso z-index: 1; per mantenere il div del .navbar_background al di sotto di quello del .menu_bar_div MA al di sopra del .content_div */
+        z-index: 1;
+        position: fixed;
+        top: 0px;
+        left: 10px;
+        right: 10px;
+    }
+
+    #menu_button_div {
+        padding: 2px 4px;
+        width: 30px;
+        border-radius: 8px;
+        border: 1px solid #A555EC;
+    }
+
+    #menu_button_div:hover{
+        background-color: #A555EC;
+        cursor: pointer;
+    }
+
+    #menu_button_div:hover > .menu_button_line {
+        background-color: white;
+    }
+    
+    .menu_button_line {
+        background-color: #A555EC;
+        height: 2px;
+        width: 27px;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .phone_nav_bar_div {
+        /* border: 2px solid #A555EC;
+        border-radius: 10px; */
+        width: fit-content;
+        /* margin: auto; */
+        margin: 5px 0px 0px 0px;
+    }
+
+    .phone_ul {
+        list-style: none;
+        text-align: start;
+        font-size: 1rem;
+        padding-inline-start: 0px;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .phone_ul li {
+        padding: 5px 5px;
+        /* width: auto; */
+        width: fit-content;
+    }
+
+    .phone_ul a {
+        text-decoration: none;
+        color: #A555EC
+    }
+
+    .phone_ul li a:hover {
+        text-decoration: none;
+        color: #F9F5F6;
+    }
+
+    .bottom_line{
+        /* border-bottom: 1px solid #A555EC; */
+    }
+
+    /* uguale a .laptop_ul li:hover */
+    .phone_ul li:hover{
+        color: #F9F5F6;
+        background-color: #A555EC;
+        cursor: pointer;
+    }
+
+    /* .first_line:hover {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .last_line:hover {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    } */
+}
+
+
+/*  ---------------------------     */
+/*  ---------------------------     */
+/*  ---------------------------     */
+/*  ---------------------------     */
+/*  ---------------------------     */
+
+/* contenuto */
+.content_div {
+    background-color: #FDCEDF;
+    color: #8238c2;
+    /* Uso z-index: 0; per mantenere il div del contenuto al di sotto di quello del .menu_bar_div e del .navbar_background */
+    /* z-index: 0; */
+}
+
+/* Trattamenti mani */
+#mani_div {
+    text-align: center;
+}
+
+#mani_div h2 {
+    margin: auto;
+    padding: 40px;
+    font-size: 2.5rem;
+}
+
+#mani_ul {
+    list-style: none;
+    padding: 0px; /* per mantenere centrati i box rispetto al div */
+    display: inline-block;
+}
+
+#mani_ul li{
+    padding: 10px 5px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+#mani_div p {
+    padding-top: 50px;
+}
+
+#mani_div a {
+    text-decoration: none;
+    color: #8238c2;
+}
+
+.immagini{
+    /* display: inline-flexbox; */
+    /*  max-inline-size mi serve a settare la dimensione massima dell'intero
+        contenitore delle immagini: volendo al max 4 immagini considero la
+        width di ogni img pari a 150px*4 = 600px a cui sommo i 10px*4 di padding
+    */
+    max-inline-size: 700px;
+    /* margin: auto; Posiziono al centro dello schermo il contenitore */
+    margin: auto;
+    padding: 50px 0px;
+}
+
+.immagini img{
+    height: 150px;
+    width: 150px;
+    padding: 10px;
+}
+
+/*  ---------------------------     */
+/*  ---------------------------     */
+/* Promozioni */
+/*  ---------------------------     */
+/*  ---------------------------     */
+.section_div {
+    text-align: center;
+    padding-bottom: 3vw;
+}
+
+.section_div h2 {
+    margin: 0px;
+    padding: calc(min(3vw, 40px));
+    font-size: 2.5rem;
+    display: inline-flex;
+}
+
+.section_div p {
+    margin-bottom: 0px;;
+}
+
+.centered_ul {
+    display: inline-block;
+    text-align: left;
+}
+
+
+/*  ---------------------------     */
+/*  ---------------------------     */
+/*            Contatti              */
+/*  ---------------------------     */
+/*  ---------------------------     */
+.img_svg {
+    padding-right: 3px;
+}
+
+.orari_apertura_ul {
+    display: inline-block;
+}
+
+.orari_apertura_ul {
+    width: 250px;
+    padding: 0;
+}
+
+.orari_apertura_ul li {
+    justify-content: space-between;
+    display: flex;
+}
+
+.phone_contacts_ul {
+    list-style: none;
+    padding: 0;
+}
+
+.phone_contacts_ul a {
+    color: #8238c2;
+}
+
+svg {
+    padding-right: 10px;
+}
+
+.contact_icon {
+    margin: 10px;
+}
+
+.map-image{
+    padding: 50px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/*  ---------------------------     */
+/*  ---------------------------     */
+/*             Centro               */
+/*  ---------------------------     */
+/*  ---------------------------     */
+
+:root {
+    --arrow-padding: 2vw;
+}
+
+.carousel_container {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 80vw;
+    margin: auto;
+    padding-top: calc((min(10%, 50px)));
+    padding-bottom: calc((min(10%, 50px)));
+    position: relative;
+}
+
+.centro_img {
+    width: 60vw;
+    /* Per avere un formato 16:9 -> 60vw : 16 = x : 9 -> x = (60 * 9 / 16)vw */
+    height: 34vw;
+}
+
+/* Imposto di default tutte le immagini con display: none, successivamente aggiungo nel centro.html la classe .slide_active
+   in modo tale da rendere visibile solamente una immagine */
+.slide_img {
+    display: none;
+}
+
+.slide_active {
+    display: block;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: var(--arrow-padding);
+    /* Per rendere trasparente la restante parte del quadrato uso una opacity: 0 tramite rgba(0, 0, 0, 0) */
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+
+}
+
+.arrow:hover {
+    cursor: pointer;
+    border-color: rgba(0, 0, 0, 0.5);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    left: 5%;
+    /* Formula per centrare verticalmente le arrows all'interno del container */
+    top: calc(45% - var(--arrow-padding)/2);
+}
+
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    right: 5%;
+    /* Formula per centrare verticalmente le arrows all'interno del container */
+    top: calc(45% - var(--arrow-padding)/2);
+}
+
+/* .click{
+    padding: 10px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+} */
+
+.slide_indicator {
+    width: min(20vw, 50px);
+    height: 8px;
+    margin-top: min(5vw, 15px);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/*  ---------------------------     */
+/*  ---------------------------     */
+/*  ---------------------------     */
+/*  ---------------------------     */
+
+/* footer */
+#footer_div {
+    color: #F9F5F6;
+    background-color: #F195B7;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+    clear: both;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.footer_p {
+    margin-block-start: 0px;
+    margin-bottom: 5px;
+}
+
+
+/* Cookies */
+#cookie-banner {
+    position: fixed;
+    /* width: 50%   +   left: 25%
+    -> mi permette di avere una larghezza del div del 50% e di metterlo al centro */
+    /* width: 80%; */
+    left: 8%;
+    height: fit-content;
+    bottom: 40%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    /* display: none; */
+}
+
+#cookie-banner p {
+    margin: 10px;
+}
+
+#cookie-banner button {
+    background-color: #007bff;
+    color: #fff;
+    border-style: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#cookie-banner button:hover {
+    background-color: #0056b3;
+}
+
