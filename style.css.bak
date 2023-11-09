@@ -132,18 +132,14 @@ h2 {
         position: relative;
     }
 
-    /* pointer: fine -> per non applicare queste proprieta' a dispositivi touch */
-    @media(pointer: fine){
-        #menu_button_div:hover{
-            background-color: #A555EC;
-            cursor: pointer;
-        }
-    
-        #menu_button_div:hover > .menu_button_line {
-            background-color: #F8E8EE;
-        }
+    .menu_button_div_hover {
+        background-color: #A555EC;
+        cursor: pointer;
     }
 
+    /* .menu_button_line_hover {
+        background-color: white;
+    } */
     
     .menu_button_line {
         background-color: #A555EC;

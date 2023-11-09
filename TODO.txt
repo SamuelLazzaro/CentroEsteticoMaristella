@@ -9,5 +9,10 @@
 - come ottenere la geolocalizzazione dell'utente: https://www.sanwebe.com/2016/04/get-current-location-of-user-using-jquery
 - Sostituire if($(this).width() <= 913){  con la visibilità del pulsante MENU
 - Se non riesce a caricare l'immagine di Google Maps per assenza di internet inserire un rettangolo con una scritta
+- Provare ad usare 2 file JS separati per caricare header e footer e inserire direttamente lo <script> dell'header_navbar prima che inizi
+  il div del contenuto, in questo modo, forse, potrebbe caricare l'header_navbar in maniera istantanea.
+- Nel caso di display per cellulare, sistemare la widht degli anchor tag dei vari html, in quanto è molto larga.
+- Se pulsante MENU premuto ma non si effettua una scelta, allora rimane il pulsante colorato
+- Se pulsante MENU premuto ma non si effettua una scelta e si fa uno scroll in giù, non funziona correttamente il riposizionamento della NAVBAR
 
 

@@ -1,6 +1,34 @@
 // Expand & Collaps phone navbar
+// $("#menu_button_div").on("mouseenter", function(){
+//   $("#menu_button_div").addClass("menu_button_div_hover");
+//   $(".menu_button_line").prop("background-color", "#F9F5F6");
+// });
+
+// $("#menu_button_div").on("mouseleave", function(){
+//   $("#menu_button_div").removeClass("menu_button_div_hover");
+//   $(".menu_button_line").removeProp("background-color");
+// });
+
+function isTouchDevice() {
+  return (('ontouchstart' in window) ||
+     (navigator.maxTouchPoints > 0) ||
+     (navigator.msMaxTouchPoints > 0));
+}
+
 $("#menu_button_div").on("click", function(){
   $("#show_hide_phone_navbar").slideToggle();
+  $(".menu_button_line#top").toggleClass("menu_top_line");
+  $(".menu_button_line#center").toggleClass("menu_center_line");
+  $(".menu_button_line#bottom").toggleClass("menu_bottom_line");
+
+  if(isTouchDevice() == true){
+    $("#menu_button_div").css("background-color", "#A555EC");
+    $(".menu_button_line").css("background-color", "#F8E8EE");
+    setTimeout(function(){
+      $("#menu_button_div").removeAttr("style");
+      $(".menu_button_line").removeAttr("style");
+    }, 100);
+  }
 });
 
 var NavBarBack_isAdded = false;
