@@ -14,5 +14,8 @@
 - Nel caso di display per cellulare, sistemare la widht degli anchor tag dei vari html, in quanto è molto larga.
 - Se pulsante MENU premuto ma non si effettua una scelta, allora rimane il pulsante colorato
 - Se pulsante MENU premuto ma non si effettua una scelta e si fa uno scroll in giù, non funziona correttamente il riposizionamento della NAVBAR
+- Nel menu a tendina, se premo con il touch si vede un background strano, provare a risolvere togliendo l'hover come proprietà in tal caso
+- fare il border del menu_button_div di 2px invece di 1px? Chiedere a Gine
+
 
 

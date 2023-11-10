@@ -132,14 +132,18 @@ h2 {
         position: relative;
     }
 
-    .menu_button_div_hover {
-        background-color: #A555EC;
-        cursor: pointer;
+    /* pointer: fine -> per non applicare queste proprieta' a dispositivi touch */
+    @media(pointer: fine){
+        #menu_button_div:hover{
+            background-color: #A555EC;
+            cursor: pointer;
+        }
+    
+        #menu_button_div:hover > .menu_button_line {
+            background-color: #F8E8EE;
+        }
     }
 
-    /* .menu_button_line_hover {
-        background-color: white;
-    } */
     
     .menu_button_line {
         background-color: #A555EC;
@@ -221,7 +225,7 @@ h2 {
         /* display: block; e' necessario per far funzionare correttamente width: fit-content;
         in modo tale da non estendere ad una width maggiore rispetto a quella dell'elemento
         la link reference dell'anchor tag */
-        display: block;
+        display: block;s
         width: fit-content;
     }
 
