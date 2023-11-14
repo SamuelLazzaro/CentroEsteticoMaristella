@@ -6,6 +6,22 @@
 var num_images = $(".slide_img").length;
 var id_active;
 
+// Restituisce TRUE se il dispositivo e' un touch screen, altrimenti FALSE
+function isTouchDevice() {
+    return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
+}
+
+function clickBehaviour_for_touchScreen(arrow_selector){
+    // Per dispositivi touch gestisco il cambio del border-color delle frecce tramite jQuery, dato che
+    // la proprieta' "hover" non funziona correttamente per tali dispositivi
+    if(isTouchDevice() == true){
+        $(arrow_selector).css("border-color", "rgba(0, 0, 0, 0.5");
+        setTimeout(function(){
+          $(arrow_selector).removeAttr("style");
+        }, 100);
+    }
+}
+
 ////////////////////////////////////////
 //  PREVIOUS ARROW
 ////////////////////////////////////////
@@ -19,6 +35,8 @@ $(".arrow.left").on("click", function(){
     }else{
         $(".slide_img#" + (--id_active)).addClass("slide_active");
     }
+
+    clickBehaviour_for_touchScreen("#previous");
 });
 
 ////////////////////////////////////////
@@ -34,6 +52,8 @@ $(".arrow.right").on("click", function(){
     }else{
         $(".slide_img#" + (++id_active)).addClass("slide_active");
     }
+
+    clickBehaviour_for_touchScreen("#next");
 });
 
 ////////////////////////////////////////
