@@ -184,18 +184,18 @@ h2 {
         -o-transition: transform 1s; */
         transform-origin: center;
         transform: translate(0, 8px) rotateZ(45deg);
-        transition: transform 1s;
+        transition: transform 500ms;
     }
 
     .menu_bottom_line {
         transform-origin: center;
         transform:  translate(0, -8px) rotateZ(-45deg); 
-        transition: transform 1s;
+        transition: transform 500ms;
     }
 
     .menu_center_line {
         opacity: 0;
-        transition: opacity 1s;
+        transition: opacity 500ms;
     }
 
     /* _X -> proprieta' da applicare quando il pulsante MENU diventa una X per chiudere il menu a tendina */
@@ -203,19 +203,19 @@ h2 {
         transform-origin: center;
         /* translate(0, 0) -> permette di farlo tornare alla posizione iniziale */
         transform: translate(0, 0);
-        transition: transform 1s;
+        transition: transform 500ms;
     }
 
     .menu_bottom_line_X {
         transform-origin: center;
         /* translate(0, 0) -> permette di farlo tornare alla posizione iniziale */
         transform:  translate(0, 0);
-        transition: transform 1s;
+        transition: transform 500ms;
     }
 
     .menu_center_line_X {
         opacity: 1;
-        transition: opacity 1s;
+        transition: opacity 500ms;
     }
 
     .phone_nav_bar_div {
@@ -427,7 +427,7 @@ svg {
     width: 80vw;
     margin: auto;
     padding-top: calc((min(10%, 50px)));
-    padding-bottom: calc((min(10%, 50px)));
+    padding-bottom: calc((min(5%, 33px)));
     position: relative;
 }
 
@@ -448,7 +448,7 @@ svg {
 }
 
 .arrow {
-    border: solid black;
+    border: solid #F195B7;
     border-width: 0 1vw 1vw 0;
     display: inline-block;
     padding: var(--arrow-padding);
@@ -464,7 +464,7 @@ proprieta' di hover ha dei problemi con i dispositivi touch screen */
 @media(pointer: fine){
     .arrow:hover {
         cursor: pointer;
-        border-color: rgba(0, 0, 0, 0.5);
+        border-color: rgba(166, 84, 237, 1);
     }
 }
 
@@ -500,6 +500,16 @@ proprieta' di hover ha dei problemi con i dispositivi touch screen */
     margin-top: min(5vw, 15px);
     margin-left: 5px;
     margin-right: 5px;
+    background-color: #F195B7;
+}
+
+/* pointer: fine -> per non applicare queste proprieta' a dispositivi touch, in quanto la 
+proprieta' di hover ha dei problemi con i dispositivi touch screen */
+@media(pointer: fine){
+    .slide_indicator:hover {
+        cursor: pointer;
+        background-color: #A555EC;
+    }
 }
 
 /*  ---------------------------     */
