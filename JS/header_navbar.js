@@ -14,7 +14,7 @@ function isTouchDevice() {
 }
 
 $(".menu_button_div").on("click", function(){
-  $("#show_hide_phone_navbar").slideToggle();
+  $("#show_hide_phone_navbar").slideToggle(500);  // Set 500ms for slideUp & slideDown
 
   if($(".menu_button_div").hasClass("three_lines")){
     $(".menu_button_line#top").toggleClass("menu_top_line");

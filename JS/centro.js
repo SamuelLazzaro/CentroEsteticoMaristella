@@ -4,7 +4,7 @@
 //
 
 var num_images = $(".slide_img").length;
-var id_active;
+var str_id_active = "";
 
 // Restituisce TRUE se il dispositivo e' un touch screen, altrimenti FALSE
 function isTouchDevice() {
@@ -25,15 +25,22 @@ function clickBehaviour_for_touchScreen(arrow_selector){
 ////////////////////////////////////////
 //  PREVIOUS ARROW
 ////////////////////////////////////////
+var id_active;
+
 $(".arrow.left").on("click", function(){
-    id_active = $(".slide_active").attr("id");      // Get attribute "id" number of the actived slide
+    str_id_active = $(".slide_active").attr("id");      // Get attribute "id" number of the actived slide
+
+    id_active = str_id_active[str_id_active.length-1];  // Get last element of the string
 
     $(".slide_active").removeClass("slide_active");
+    $(".slide_indicator").removeAttr("style");
 
     if(id_active == 1){
-        $(".slide_img#" + num_images).addClass("slide_active");
+        $("#slide" + num_images).addClass("slide_active");
+        $("#b" + num_images).css("background-color", "#A555EC");
     }else{
-        $(".slide_img#" + (--id_active)).addClass("slide_active");
+        $("#slide" + (--id_active)).addClass("slide_active");
+        $("#b" + (id_active)).css("background-color", "#A555EC");
     }
 
     clickBehaviour_for_touchScreen("#previous");
@@ -43,14 +50,19 @@ $(".arrow.left").on("click", function(){
 //  NEXT ARROW
 ////////////////////////////////////////
 $(".arrow.right").on("click", function(){
-    id_active = $(".slide_active").attr("id");      // Get attribute "id" number of the actived slide
+    str_id_active = $(".slide_active").attr("id");      // Get attribute "id" number of the actived slide
+
+    id_active = str_id_active[str_id_active.length-1];  // Get last element of the string
 
     $(".slide_active").removeClass("slide_active");
+    $(".slide_indicator").removeAttr("style");
 
     if(id_active == num_images){
-        $(".slide_img#1").addClass("slide_active");
+        $("#slide1").addClass("slide_active");
+        $("#b1").css("background-color", "#A555EC");
     }else{
-        $(".slide_img#" + (++id_active)).addClass("slide_active");
+        $("#slide" + (++id_active)).addClass("slide_active");
+        $("#b" + (id_active)).css("background-color", "#A555EC");
     }
 
     clickBehaviour_for_touchScreen("#next");
@@ -64,7 +76,9 @@ $(".slide_indicator").on("click", function(){
     var button_id = button_str_id[1];
     
     $(".slide_active").removeClass("slide_active");
+    $(".slide_indicator").removeAttr("style");
 
-    $(".slide_img#" + button_id).addClass("slide_active");
+    $("#slide" + button_id).addClass("slide_active");
+    $("#b" + button_id).css("background-color", "#A555EC");
 
 });
