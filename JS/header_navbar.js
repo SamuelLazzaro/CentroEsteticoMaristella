@@ -41,6 +41,20 @@ $(".menu_button_div").on("click", function(){
   }
 });
 
+
+$(".phone_ul li").on("click", function(){
+  id_li = $(this).attr("id");
+  console.log(id_li);
+  if(isTouchDevice() == true){
+    $(".phone_ul li#" + id_li).css("background-color", "#A555EC");
+    $(".phone_ul li#" + id_li + " a").css("color", "#F8E8EE");
+    setTimeout(function(){
+      $(".phone_ul li#" + id_li).removeAttr("style");
+      $(".phone_ul li#" + id_li + " a").removeAttr("style");
+    }, 100);
+  }
+});
+
 var NavBarBack_isAdded = false;
 // var MenuBar_height = $(".menu_bar_div").height() + 35;
 
