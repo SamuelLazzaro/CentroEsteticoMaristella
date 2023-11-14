@@ -95,7 +95,7 @@ h2 {
 
 
 /*  Display Cellulari   */
-@media (max-width: 949px){
+@media (max-width: 950px){
     /* Per non mostrare la lista menu nella navigation bar quando ho uno schermo piu' piccolo di 480px */
     .laptop_nav_bar_div{
         display: none;
@@ -198,6 +198,7 @@ h2 {
         transition: opacity 1s;
     }
 
+    /* _X -> proprieta' da applicare quando il pulsante MENU diventa una X per chiudere il menu a tendina */
     .menu_top_line_X {
         transform-origin: center;
         /* translate(0, 0) -> permette di farlo tornare alla posizione iniziale */
@@ -239,21 +240,26 @@ h2 {
         width: fit-content;
     }
 
+    /* pointer: fine -> per non applicare queste proprieta' a dispositivi touch */
+    @media(pointer: fine){
     /* uguale a .laptop_ul li:hover */
-    .phone_ul li:hover{
-        color: #F9F5F6;
-        background-color: #A555EC;
-        cursor: pointer;
-    }
+        .phone_ul li:hover{
+            color: #F9F5F6;
+            background-color: #A555EC;
+            cursor: pointer;
+        }
 
-    /* Per cambiare il colore dell'anchor tag quando si è sui bordi del <li> element */
-    .phone_ul li:hover a {
-        color: #F9F5F6;
+        /* Per cambiare il colore dell'anchor tag quando si è sui bordi del <li> element */
+        .phone_ul li:hover a {
+            color: #F9F5F6;
+        }
     }
 
     .phone_ul a {
         text-decoration: none;
         color: #A555EC;
+        -webkit-tap-highlight-color: transparent;
+
         /* display: block; e' necessario per far funzionare correttamente width: fit-content;
         in modo tale da non estendere ad una width maggiore rispetto a quella dell'elemento
         la link reference dell'anchor tag */
@@ -449,12 +455,17 @@ svg {
     /* Per rendere trasparente la restante parte del quadrato uso una opacity: 0 tramite rgba(0, 0, 0, 0) */
     background-color: rgba(0, 0, 0, 0);
     position: absolute;
-
+    -webkit-tap-highlight-color: transparent;
 }
 
-.arrow:hover {
-    cursor: pointer;
-    border-color: rgba(0, 0, 0, 0.5);
+
+/* pointer: fine -> per non applicare queste proprieta' a dispositivi touch, in quanto la 
+proprieta' di hover ha dei problemi con i dispositivi touch screen */
+@media(pointer: fine){
+    .arrow:hover {
+        cursor: pointer;
+        border-color: rgba(0, 0, 0, 0.5);
+    }
 }
 
 .left {
