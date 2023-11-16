@@ -423,18 +423,19 @@ svg {
 }
 
 .carousel_container {
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(255, 255, 255, 0); */
     width: 80vw;
     margin: auto;
-    padding-top: calc((min(10%, 50px)));
-    padding-bottom: calc((min(5%, 33px)));
+    /* padding-top: calc((min(10%, 50px)));
+    padding-bottom: calc((min(5%, 33px))); */
+    padding: 0;
     position: relative;
 }
 
 .centro_img {
-    width: 60vw;
+    width: 80vw;
     /* Per avere un formato 16:9 -> 60vw : 16 = x : 9 -> x = (60 * 9 / 16)vw */
-    height: 34vw;
+    height: 45vw;
 }
 
 /* Imposto di default tutte le immagini con display: none, successivamente aggiungo nel centro.html la classe .slide_active
@@ -448,7 +449,7 @@ svg {
 }
 
 .arrow {
-    border: solid #F195B7;
+    border: solid #F9F5F6;
     border-width: 0 1vw 1vw 0;
     display: inline-block;
     padding: var(--arrow-padding);
@@ -471,20 +472,37 @@ proprieta' di hover ha dei problemi con i dispositivi touch screen */
 .left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
-    left: 5%;
+    left: 2.2vw;
     /* Formula per centrare verticalmente le arrows all'interno del container */
-    top: calc(45% - var(--arrow-padding)/2);
+    top: calc(32% - var(--arrow-padding)/2);
 }
 
 
 .right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
-    right: 5%;
+    right: 2.2vw;
     /* Formula per centrare verticalmente le arrows all'interno del container */
-    top: calc(45% - var(--arrow-padding)/2);
+    top: calc(32% - var(--arrow-padding)/2);
 }
 
+.circle {
+    position: absolute;
+    width: 8vw;
+    height: 8vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: hidden  1px #000000;
+    border-radius: 50%;
+    top: calc(41% - var(--arrow-padding)/2);
+}
+
+#left_circle {
+    left: 0px;
+}
+
+#right_circle {
+    right: 0px;
+}
 /* .click{
     padding: 10px;
     border: solid black;
@@ -495,12 +513,14 @@ proprieta' di hover ha dei problemi con i dispositivi touch screen */
 } */
 
 .slide_indicator {
-    width: min(20vw, 50px);
-    height: 8px;
-    margin-top: min(5vw, 15px);
+    width: min(5vw, 30px);
+    height: min(5vw, 30px);
+    margin-top: min(5vw, 5px);
     margin-left: 5px;
     margin-right: 5px;
-    background-color: #F195B7;
+    background-color: #F9F5F6;
+    border: hidden; 
+    border-radius: 50%;
 }
 
 /* pointer: fine -> per non applicare queste proprieta' a dispositivi touch, in quanto la 
