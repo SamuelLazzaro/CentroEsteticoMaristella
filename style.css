@@ -46,7 +46,7 @@ h2 {
 
 
 /*  Display pc / laptop / ipad  */
-@media (min-width: 950px){
+@media (min-width: 951px){
     .menu_button_div{
         /* Per non mostrare il pulsante menu nella navigation bar quando ho uno schermo piu' grande di 481px */
         display: none;

@@ -1,3 +1,4 @@
+
 $(function(){
   $(".header_navbar").load("header_navbar.html"); 
 });
@@ -5,4 +6,3 @@ $(function(){
 $(function(){
   $(".footer").load("footer.html"); 
 });
-
