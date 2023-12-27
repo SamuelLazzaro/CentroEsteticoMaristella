@@ -288,16 +288,6 @@ h2 {
 }
 
 /* Trattamenti mani */
-#mani_div {
-    text-align: center;
-}
-
-#mani_div h2 {
-    margin: auto;
-    padding: 40px;
-    font-size: 2.5rem;
-}
-
 .mani_ul {
     list-style: none;
     padding: 0px; /* per mantenere centrati i box rispetto al div */
@@ -305,19 +295,16 @@ h2 {
 }
 
 .mani_ul li{
-    padding: 10px 5px;
-    font-size: 1.3rem;
+    padding: 5px;
+    font-size: 1.0rem;
     font-weight: bold;
 }
 
-#mani_div p {
-    padding-top: 50px;
-}
-
-#mani_div a {
-    text-decoration: none;
+.mani_ul a {
+    /* text-decoration: none; */
     color: #8238c2;
 }
+
 
 .immagini{
     /* display: inline-flexbox; */
@@ -328,7 +315,7 @@ h2 {
     max-inline-size: 700px;
     /* margin: auto; Posiziono al centro dello schermo il contenitore */
     margin: auto;
-    padding: 50px 0px;
+    padding: 20px 0px;
 }
 
 .immagini img{
@@ -349,9 +336,9 @@ h2 {
 
 .section_div h2 {
     margin: 0px;
-    padding: calc(min(3vw, 40px));
+    padding: calc(min(3vw, 10px));
     font-size: 2.5rem;
-    display: inline-flex;
+    /* display: inline-flex; */
 }
 
 .section_div p {
