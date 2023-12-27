@@ -326,7 +326,7 @@ h2 {
 
 /*  ---------------------------     */
 /*  ---------------------------     */
-/* Promozioni */
+/*          Promozioni              */
 /*  ---------------------------     */
 /*  ---------------------------     */
 .section_div {
@@ -342,7 +342,8 @@ h2 {
 }
 
 .section_div p {
-    margin-bottom: 0px;;
+    margin-bottom: 0px;
+    padding: 0px 50px;
 }
 
 .centered_ul {
@@ -392,11 +393,49 @@ svg {
 }
 
 .map-image{
-    padding: 50px 10px;
+    padding: 50px;
     display: flex;
     justify-content: center;
 }
 
+
+
+/*  ---------------------------     */
+/*  ---------------------------     */
+/*             Trucco               */
+/*  ---------------------------     */
+/*  ---------------------------     */
+.trucco p {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    text-align: justify;
+
+    margin: auto;
+}
+
+.trucco_images {
+    max-inline-size: 900px;
+    /* margin: auto; Posiziono al centro dello schermo il contenitore */
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.trucco_images img {
+    padding-top: min(2vw, 10px);
+    padding-bottom: min(2vw, 10px);
+}
+
+.single {
+    width: min(80vw, 900px);
+}
+
+.double {
+    /* Da rivedere in quanto voglio che sia in corrispondenza delle foto di sopra ma a coppia */
+    height: min(35vw, 300px);
+    padding-right: 2vw;
+    padding-left: 2vw;
+}
 
 
 /*  ---------------------------     */
