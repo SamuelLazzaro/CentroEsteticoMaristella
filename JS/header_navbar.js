@@ -41,10 +41,6 @@ $(".menu_button_div").on("click", function(){
 
     XisPressed = true;
 
-    // console.log("\n");
-    // console.log("Close X: " + document.querySelector(".content_div").getBoundingClientRect().top);
-    // console.log("\n");
-
   }
 
 
@@ -82,21 +78,17 @@ var NavBarBack_isAdded = false;
 
 function resize_scroll() {
   
-  var menu_bar_div_height = 56//$(".menu_bar_div").outerHeight(true);   // height + margin + padding on top & bottom
-
+  var menu_bar_div_height = $(".menu_bar_div").outerHeight(true);   // height + margin + padding on top & bottom del menu_bar_div
   const topDistance = 10; //px
 
-  var content_div_top = document.querySelector(".content_div").getBoundingClientRect().top;
+  var windowScrollY = window.scrollY;
+  // Se scrollando in basso supero il limite dell'altezza del #title_div a cui sommo il margin-bottom del relativo <p>, allora blocco il menu_bar_div
+  var topLimit = $("#title_div").height() + parseInt($("#title_div p").css("margin-bottom"));
+  // var content_div_top = document.querySelector(".content_div").getBoundingClientRect().top;
   // var menu_bar_div_top = document.querySelector(".menu_bar_div").getBoundingClientRect().top;
 
-  // console.log("\n\n");
-  // console.log("BEFORE: " + content_div_top);
-  // console.log("Menu height: " + menu_bar_div_height);
-
-  if (content_div_top <= (menu_bar_div_height + topDistance) /* && menu_bar_div_top <= topDistance */) {
+  if (windowScrollY >= topLimit) {
     // if($(window).width() <= 913){                             // NON usare .css("width") perche' va in errore (vedi console nel caso)
-
-    // console.log("IF: " + document.querySelector(".content_div").getBoundingClientRect().top);
 
     if($(".menu_button_div").css("display") != "none"){
       $(".menu_bar_div").css("position", "fixed");
@@ -104,15 +96,11 @@ function resize_scroll() {
       $(".menu_bar_div").css("right", "10px");
       $(".menu_bar_div").css("left", "10px");
 
-      // if(XisPressed == false){
-      //   // $(".content_div").css("margin-top", menu_bar_div_height + topDistance);
-      //   // console.log("X is NOT pressed");
-      // }
-
-      $(".content_div").css("margin-top", menu_bar_div_height + topDistance);
-
-
-      console.log("AFTER: " + document.querySelector(".content_div").getBoundingClientRect().top);
+      // In realta' questo if non servirebbe piu', ma quello che c'e' all'interno si
+      if(XisPressed == false){
+        $(".content_div").css("margin-top", menu_bar_div_height + topDistance);
+        // console.log("X is NOT pressed");
+      }
 
       $(".navbar_background").css("visibility", "visible");
 
