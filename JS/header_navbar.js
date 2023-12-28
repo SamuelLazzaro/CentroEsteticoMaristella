@@ -81,20 +81,19 @@ var NavBarBack_isAdded = false;
 // var MenuBar_height = $(".menu_bar_div").height() + 35;
 
 function resize_scroll() {
-
   
   var menu_bar_div_height = 56//$(".menu_bar_div").outerHeight(true);   // height + margin + padding on top & bottom
 
   const topDistance = 10; //px
 
   var content_div_top = document.querySelector(".content_div").getBoundingClientRect().top;
-  var menu_bar_div_top = document.querySelector(".menu_bar_div").getBoundingClientRect().top;
+  // var menu_bar_div_top = document.querySelector(".menu_bar_div").getBoundingClientRect().top;
 
   // console.log("\n\n");
   // console.log("BEFORE: " + content_div_top);
   // console.log("Menu height: " + menu_bar_div_height);
 
-  if (content_div_top <= (menu_bar_div_height + topDistance) && menu_bar_div_top <= topDistance) {
+  if (content_div_top <= (menu_bar_div_height + topDistance) /* && menu_bar_div_top <= topDistance */) {
     // if($(window).width() <= 913){                             // NON usare .css("width") perche' va in errore (vedi console nel caso)
 
     // console.log("IF: " + document.querySelector(".content_div").getBoundingClientRect().top);
@@ -105,10 +104,10 @@ function resize_scroll() {
       $(".menu_bar_div").css("right", "10px");
       $(".menu_bar_div").css("left", "10px");
 
-      if(XisPressed == false){
-        // $(".content_div").css("margin-top", menu_bar_div_height + topDistance);
-        // console.log("X is NOT pressed");
-      }
+      // if(XisPressed == false){
+      //   // $(".content_div").css("margin-top", menu_bar_div_height + topDistance);
+      //   // console.log("X is NOT pressed");
+      // }
 
       $(".content_div").css("margin-top", menu_bar_div_height + topDistance);
 
