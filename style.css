@@ -10,10 +10,11 @@ body {
     /* #ff80ae */
     /* #ef3378 */
     /* #f096b7 */
+    margin: auto;
     text-align: center;
     margin-top: 15px;
     border-top-right-radius: 15px;
-    border-top-left-radius: 15px;   
+    border-top-left-radius: 15px;
 }
 
 #title_div p {
@@ -21,7 +22,7 @@ body {
 }
 
 h1 {
-    padding: 30px;
+    padding: 20px;
     border: 7px solid;
     border-radius: 50%;
     display: inline-flex;
@@ -32,6 +33,31 @@ h2 {
     font-weight: bold;
 }
 
+/* Modifico la dimensione della width del title_div e del font-size dell'h1
+ * per rendere responsive il logo fittizio */
+@media (min-width: 400px){
+    #title_div {
+        width: 380px;
+    }
+}
+@media (min-width: 340px) and (max-width: 400px){
+    #title_div {
+        width: 320px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
+}
+@media (max-width: 340px){
+    #title_div {
+        width: 280px;
+    }
+
+    h1 {
+        font-size: 1.4em;
+    }
+}
 /*  -------------------------   */
 /*          BARRA MENU          */
 /*  -------------------------   */
@@ -46,7 +72,7 @@ h2 {
 
 
 /*  Display pc / laptop / ipad  */
-@media (min-width: 951px){
+@media (min-width: 950px){
     .menu_button_div{
         /* Per non mostrare il pulsante menu nella navigation bar quando ho uno schermo piu' grande di 481px */
         display: none;
@@ -219,10 +245,9 @@ h2 {
     }
 
     .phone_nav_bar_div {
-        /* border: 2px solid #A555EC;
-        border-radius: 10px; */
         width: fit-content;
-        /* margin: auto; */
+        /* Imposto una height pari al 100% della visible height in modo tale da occupare tutta la schermata con la phone_nav_bar_div */
+        height: 100vh;
         margin: 5px 0px 0px 0px;
     }
 
@@ -249,7 +274,7 @@ h2 {
             cursor: pointer;
         }
 
-        /* Per cambiare il colore dell'anchor tag quando si è sui bordi del <li> element */
+        /* Per cambiare il colore del testo dell'anchor tag quando si è sui bordi del <li> element */
         .phone_ul li:hover a {
             color: #F9F5F6;
         }
@@ -430,11 +455,15 @@ svg {
     width: min(80vw, 900px);
 }
 
+.double_div {
+    width: min(80vw, 900px);
+    display: inline-block;
+}
+
 .double {
-    /* Da rivedere in quanto voglio che sia in corrispondenza delle foto di sopra ma a coppia */
-    height: min(35vw, 300px);
-    padding-right: 2vw;
-    padding-left: 2vw;
+    width: 30vw;
+    padding-left: min(5vw, 10px);
+    padding-right: min(5vw, 10px);
 }
 
 

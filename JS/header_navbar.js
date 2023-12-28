@@ -18,6 +18,9 @@ function isTouchDevice() {
 $(".menu_button_div").on("click", function(){
   $("#show_hide_phone_navbar").slideToggle(500);  // Set 500ms for slideUp & slideDown
 
+  // Nascondo la scrollbar
+  document.body.style.overflow = 'hidden';
+
   XisPressed = false;
 
   if($(".menu_button_div").hasClass("three_lines")){
@@ -33,11 +36,9 @@ $(".menu_button_div").on("click", function(){
 
   //Non so se può servire quando premo la X
   if($(".menu_button_line#top").hasClass("menu_top_line_X")){
-    // $(".menu_bar_div").removeAttr("style");   // Rimuovo l'inline-css aggiunto nell'if
     $(".content_div").removeAttr("style");
-    // $(".navbar_background").remove();
-    // $(".navbar_background").removeAttr("style");
-    // NavBarBack_isAdded = false;
+    document.body.style.overflow = 'visible';
+
     XisPressed = true;
 
     console.log("\n");
@@ -72,6 +73,8 @@ $(".phone_ul li").on("click", function(){
       $(".phone_ul li#" + id_li + " a").removeAttr("style");
     }, 100);
   }
+
+  document.body.style.overflow = 'visible';
 });
 
 var NavBarBack_isAdded = false;
