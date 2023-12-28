@@ -13,12 +13,14 @@ body {
     margin: auto;
     text-align: center;
     margin-top: 15px;
+    margin-bottom: 15px;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
 }
 
 #title_div p {
     margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 h1 {
@@ -140,14 +142,14 @@ h2 {
     .navbar_background {
         background-color: #F9F5F6;
         width: 100vw;
-        height: 50px;
+        /* height: 50px; */
         visibility: hidden;
         /* Uso z-index: 1; per mantenere il div del .navbar_background al di sotto di quello del .menu_bar_div MA al di sopra del .content_div */
         z-index: 1;
         position: fixed;
         top: 0px;
-        left: 10px;
-        right: 10px;
+        left: 0px;
+        right: 0px;
     }
 
     .menu_button_div {
