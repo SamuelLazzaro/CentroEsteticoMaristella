@@ -15,11 +15,26 @@ function isTouchDevice() {
   return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
 }
 
+var scrollbarWidth = 0;
+var bodyMarginRight = 0;
+
+function getScrollbarWidth() {
+
+  scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+  bodyMarginRight = scrollbarWidth + 10;    //10 per il .body margin-right in style.css
+
+}
+
+
 $(".menu_button_div").on("click", function(){
+  getScrollbarWidth();  // Non so se serve eseguirla ad ogni ciclo
+
   $("#show_hide_phone_navbar").slideToggle(500);  // Set 500ms for slideUp & slideDown
 
   // Nascondo la scrollbar
   document.body.style.overflow = 'hidden';
+  $("body").css("margin-right", bodyMarginRight+"px");
+  $(".menu_bar_div").css("right", bodyMarginRight+"px");
 
   XisPressed = false;
 
@@ -36,8 +51,10 @@ $(".menu_button_div").on("click", function(){
 
   //Non so se può servire quando premo la X
   if($(".menu_button_line#top").hasClass("menu_top_line_X")){
-    $(".content_div").removeAttr("style");
+    $(".content_div").removeAttr("style");  // Necessario per far ricomparire il content_div quando dopo aver premuto il pulsante effettuo un resize laterale della schermata per poi premere la X
     document.body.style.overflow = 'visible';
+    // $("body").removeAttr("style");
+    $(".menu_bar_div").css("right", bodyMarginRight+"px");
 
     XisPressed = true;
 
@@ -71,21 +88,27 @@ $(".phone_ul li").on("click", function(){
   }
 
   document.body.style.overflow = 'visible';
+  $("body").removeAttr("style");
+  $(".menu_bar_div").css("right", bodyMarginRight+"px");
 });
 
 
 function resize_scroll() {
   
+  getScrollbarWidth();    // Non so se serve eseguirla ad ogni ciclo
+
   var menu_bar_div_height = $(".menu_bar_div").outerHeight(true);   // height + margin + padding on top & bottom del menu_bar_div
   const topDistance = 10; //px
 
   var windowScrollY = window.scrollY;
   // Se scrollando in basso supero il limite dell'altezza del #title_div a cui sommo il margin-bottom del relativo <p>, allora blocco il menu_bar_div
-  var topLimit = $("#title_div").height() + parseInt($("#title_div p").css("margin-bottom"));
+  var topLimit = $("#title_div").outerHeight(true) - topDistance;
   // var content_div_top = document.querySelector(".content_div").getBoundingClientRect().top;
   // var menu_bar_div_top = document.querySelector(".menu_bar_div").getBoundingClientRect().top;
 
-  if (window.scrollY >= ($("#title_div").height() + parseInt($("#title_div p").css("margin-bottom")))) {
+  $(".navbar_background").height(menu_bar_div_height + topDistance);
+
+  if (window.scrollY >= topLimit) {
     // if($(window).width() <= 913){                             // NON usare .css("width") perche' va in errore (vedi console nel caso)
 
     if($(".menu_button_div").css("display") != "none"){
@@ -105,18 +128,17 @@ function resize_scroll() {
     } else {
 
       XisPressed = false;
-
+      $(".navbar_background").removeAttr("style");
       $(".menu_bar_div").removeAttr("style");   // Rimuovo l'inline-css aggiunto nell'if
       $(".content_div").removeAttr("style");
-      $(".navbar_background").removeAttr("style");
+      
     }  
   } else {
 
     XisPressed = false;
-
+    $(".navbar_background").removeAttr("style");
     $(".menu_bar_div").removeAttr("style");   // Rimuovo l'inline-css aggiunto nell'if
     $(".content_div").removeAttr("style");
-    $(".navbar_background").removeAttr("style");
 
   }
 }
