@@ -73,8 +73,6 @@ $(".phone_ul li").on("click", function(){
   document.body.style.overflow = 'visible';
 });
 
-var NavBarBack_isAdded = false;
-// var MenuBar_height = $(".menu_bar_div").height() + 35;
 
 function resize_scroll() {
   
@@ -87,7 +85,7 @@ function resize_scroll() {
   // var content_div_top = document.querySelector(".content_div").getBoundingClientRect().top;
   // var menu_bar_div_top = document.querySelector(".menu_bar_div").getBoundingClientRect().top;
 
-  if (windowScrollY >= topLimit) {
+  if (window.scrollY >= ($("#title_div").height() + parseInt($("#title_div p").css("margin-bottom")))) {
     // if($(window).width() <= 913){                             // NON usare .css("width") perche' va in errore (vedi console nel caso)
 
     if($(".menu_button_div").css("display") != "none"){
