@@ -83,7 +83,7 @@ var NavBarBack_isAdded = false;
 function resize_scroll() {
 
   
-  var menu_bar_div_height = $(".menu_bar_div").outerHeight(true);   // height + margin + padding on top & bottom
+  var menu_bar_div_height = 56//$(".menu_bar_div").outerHeight(true);   // height + margin + padding on top & bottom
 
   const topDistance = 10; //px
 
