@@ -74,48 +74,44 @@ $(".menu_button_div").on("click", function(){
   }
 });
 
-
-$(".phone_ul li").on("click", function(){
+// anchor tag & list element devono occupare lo stesso spazio in termini di height & width
+$(".phone_ul a").on("click", function(){
   id_li = $(this).attr("id");
-  console.log(id_li);
 
   if(isTouchDevice() == true){
 
-    $(".phone_ul li#" + id_li).css("background-color", "#A555EC");
-    $(".phone_ul li#" + id_li + " a").css("color", "#F8E8EE");
+    $(".phone_ul a#" + id_li + " li").css("background-color", "#A555EC");
+    $(".phone_ul a#" + id_li + " li").css("color", "#F8E8EE");
 
-    setTimeout(function(){
-      $(".phone_ul li#" + id_li).removeAttr("style");
-      $(".phone_ul li#" + id_li + " a").removeAttr("style");
-      document.body.style.overflow = 'visible';
-      $("body").removeAttr("style");
-      $(".menu_bar_div").css("right", bodyMarginRight+"px");
-    }, 100);
-
-  } else {
-
-    document.body.style.overflow = 'visible';
-    $("body").removeAttr("style");
-    $(".menu_bar_div").css("right", bodyMarginRight+"px");
+    // Non funziona in quanto viene subito caricata la pagina successiva, eliminando quindi tutte le modifiche di stile inserite
+    // setTimeout(function(){
+    //   $(".phone_ul a#" + id_li + " li").removeAttr("style");
+    // }, 100);
 
   }
+
+  //Da non inserire nel caso del laptop ???
+  document.body.style.overflow = 'visible';
+  $("body").removeAttr("style");
+  $(".menu_bar_div").css("right", bodyMarginRight+"px");
 
 });
 
-$(".laptop_ul li").on("click", function(){
+// anchor tag & list element devono occupare lo stesso spazio in termini di height & width
+$(".laptop_ul a").on("click", function(){
   id_li = $(this).attr("id");
-  console.log(id_li);
 
   if(isTouchDevice() == true){
-    $(".laptop_ul li#" + id_li).css("background-color", "#A555EC");
-    $(".laptop_ul a li#" + id_li).css("color", "#F8E8EE");
-    $(".laptop_ul li#" + id_li).css("border-radius", "5px");
+    $(".laptop_ul a#" + id_li + " li").css("background-color", "#A555EC");
+    $(".laptop_ul a#" + id_li + " li").css("color", "#F8E8EE");
+    $(".laptop_ul a#" + id_li + " li").css("border-radius", "5px");
 
-    setTimeout(function(){
-      $(".laptop_ul li#" + id_li).removeAttr("style");
-      $(".laptop_ul a li#" + id_li).removeAttr("style");
-    }, 1000);
+    // Non funziona in quanto viene subito caricata la pagina successiva, eliminando quindi tutte le modifiche di stile inserite
+    // setTimeout(function(){
+    //   $(".laptop_ul a#" + id_li + " li").removeAttr("style");
+    // }, 100);
   }
+
 });
 
 
@@ -134,7 +130,7 @@ function resize_scroll() {
 
   $(".navbar_background").height(menu_bar_div_height + topDistance);
 
-  if (window.scrollY >= topLimit) {
+  if (windowScrollY >= topLimit) {
     // if($(window).width() <= 913){                             // NON usare .css("width") perche' va in errore (vedi console nel caso)
 
     if($(".menu_button_div").css("display") != "none"){
