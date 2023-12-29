@@ -1,5 +1,6 @@
 body {
-    background-color: #F9F5F6;
+    /* background-color: #F9F5F6; */
+    background-color: #000000;
     font-family: 'Alice', serif;
     margin: 10px;
 }
@@ -150,7 +151,8 @@ h2 {
     }
 
     .navbar_background {
-        background-color: #F9F5F6;
+        /* background-color: #F9F5F6; */
+        background-color: #000000;
         width: 100vw;
         /* height: 50px; */
         visibility: hidden;
