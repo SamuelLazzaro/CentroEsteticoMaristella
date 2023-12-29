@@ -78,18 +78,44 @@ $(".menu_button_div").on("click", function(){
 $(".phone_ul li").on("click", function(){
   id_li = $(this).attr("id");
   console.log(id_li);
+
   if(isTouchDevice() == true){
+
     $(".phone_ul li#" + id_li).css("background-color", "#A555EC");
     $(".phone_ul li#" + id_li + " a").css("color", "#F8E8EE");
+
     setTimeout(function(){
       $(".phone_ul li#" + id_li).removeAttr("style");
       $(".phone_ul li#" + id_li + " a").removeAttr("style");
+      document.body.style.overflow = 'visible';
+      $("body").removeAttr("style");
+      $(".menu_bar_div").css("right", bodyMarginRight+"px");
     }, 100);
+
+  } else {
+
+    document.body.style.overflow = 'visible';
+    $("body").removeAttr("style");
+    $(".menu_bar_div").css("right", bodyMarginRight+"px");
+
   }
 
-  document.body.style.overflow = 'visible';
-  $("body").removeAttr("style");
-  $(".menu_bar_div").css("right", bodyMarginRight+"px");
+});
+
+$(".laptop_ul li").on("click", function(){
+  id_li = $(this).attr("id");
+  console.log(id_li);
+
+  if(isTouchDevice() == true){
+    $(".laptop_ul li#" + id_li).css("background-color", "#A555EC");
+    $(".laptop_ul a li#" + id_li).css("color", "#F8E8EE");
+    $(".laptop_ul li#" + id_li).css("border-radius", "5px");
+
+    setTimeout(function(){
+      $(".laptop_ul li#" + id_li).removeAttr("style");
+      $(".laptop_ul a li#" + id_li).removeAttr("style");
+    }, 1000);
+  }
 });
 
 
