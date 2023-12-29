@@ -605,6 +605,54 @@ proprieta' di hover ha dei problemi con i dispositivi touch screen */
     }
 }
 
+
+
+/*  ---------------------------     */
+/*  ---------------------------     */
+/*        Listino Prezzi            */
+/*  ---------------------------     */
+/*  ---------------------------     */
+.header_title {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.price_table {
+    width: 420px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.left_align {
+    text-align: left;
+    /* padding-right: 30px;    Per inserire uno spazio tra un <td> e un altro */
+}
+
+.right_align {
+    text-align: right;
+}
+
+@media (max-width: 860px) {
+    .price_tables_div {
+        display: inline-block;
+        margin: auto;
+    }
+}
+
+@media (min-width: 860px){
+    .price_tables_div {
+        display: inline-flex;
+        margin: auto;
+    }
+}
+
+
+
+
+
+
 /*  ---------------------------     */
 /*  ---------------------------     */
 /*  ---------------------------     */
