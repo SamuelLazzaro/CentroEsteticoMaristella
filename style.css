@@ -489,7 +489,7 @@ svg {
     padding-right: min(5vw, 10px);
 }
 
-.section_div p.p_justify {
+.section_div.trucco p.p_justify {
     /* Aggiunto per sovrascrivere il .section_div p che inserisce un padding di 50px ad ogni lato. Con questa sovrascrittura il contenuto di <p> occupa la stessa width delle immagini inserite sotto ad esso. */
     padding-left: 0px;
     padding-right: 0px;
