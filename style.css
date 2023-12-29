@@ -454,10 +454,13 @@ svg {
 /*             Trucco               */
 /*  ---------------------------     */
 /*  ---------------------------     */
-
+.trucco {
+    width: min(80vw, 900px);
+    margin: auto;
+}
 
 .trucco_images {
-    max-inline-size: 900px;
+    /* max-inline-size: 900px; */
     /* margin: auto; Posiziono al centro dello schermo il contenitore */
     margin: auto;
     margin-top: 20px;
@@ -470,10 +473,12 @@ svg {
 }
 
 .single {
+    /* Non togliere width */
     width: min(80vw, 900px);
 }
 
 .double_div {
+    /* Non togliere width */
     width: min(80vw, 900px);
     display: inline-block;
 }
@@ -482,6 +487,11 @@ svg {
     width: min(30vw, 300px);
     padding-left: min(5vw, 10px);
     padding-right: min(5vw, 10px);
+}
+
+.section_div p.p_justify {
+    /* padding-left: 0px;
+    padding-right: 0px; */
 }
 
 
