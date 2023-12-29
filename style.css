@@ -60,6 +60,8 @@ h2 {
         font-size: 1.4em;
     }
 }
+
+
 /*  -------------------------   */
 /*          BARRA MENU          */
 /*  -------------------------   */
@@ -102,17 +104,20 @@ h2 {
         margin: 0px;
     }
     
-    .laptop_ul li:hover{
-        color: #F9F5F6;
-        background-color: #A555EC;
-        /* background-color: #bd8de6; e' un colore piu' pastello*/
-        cursor: pointer;
-        border-radius: 5px;
+    @media(pointer: fine){
+        .laptop_ul li:hover{
+            color: #F9F5F6;
+            background-color: #A555EC;
+            /* background-color: #bd8de6; e' un colore piu' pastello*/
+            cursor: pointer;
+            border-radius: 5px;
+        }    
     }
-
+    
     .laptop_ul a {
         text-decoration: none;
-        color: #A555EC
+        color: #A555EC;
+        -webkit-tap-highlight-color: transparent;   /* Per non far comparire il background blue dell'anchor tag */
     }
 
     /* #last_line_laptop_nav_bar_div {
@@ -186,25 +191,6 @@ h2 {
         margin-right: auto;
     }
 
-    /* .menu_button_clicked {
-        background-color: #A555EC;
-    }
-
-    .menu_button_clicked_line {
-        background-color: #F8E8EE;
-    }
-
-    pointer: fine -> per non applicare queste proprieta' a dispositivi touch
-    @media(pointer: fine){
-        .menu_button_clicked:hover{
-            background-color: #F8E8EE;
-            cursor: pointer;
-        }
-    
-        .menu_button_clicked:hover > .menu_button_clicked_line {
-            background-color: #A555EC;
-        }
-    } */
 
     .menu_top_line {
         /* -moz-transition: transform 1s;
@@ -285,8 +271,8 @@ h2 {
     .phone_ul a {
         text-decoration: none;
         color: #A555EC;
-        -webkit-tap-highlight-color: transparent;
-
+        -webkit-tap-highlight-color: transparent;   /* Per non far comparire il background blue dell'anchor tag */
+        
         /* display: block; e' necessario per far funzionare correttamente width: fit-content;
         in modo tale da non estendere ad una width maggiore rispetto a quella dell'elemento
         la link reference dell'anchor tag */
