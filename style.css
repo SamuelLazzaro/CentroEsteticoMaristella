@@ -536,9 +536,20 @@ svg {
 /* pointer: fine -> per non applicare queste proprieta' a dispositivi touch, in quanto la 
 proprieta' di hover ha dei problemi con i dispositivi touch screen */
 @media(pointer: fine){
+    /* Per mantenere il cursore di tipo pointer e la freccia colorata quando col cursore vado sulla freccia */
     .arrow:hover {
         cursor: pointer;
         border-color: rgba(166, 84, 237, 1);
+    }
+
+    /* Per far comparire il cursore pointer quando col cursore entro nel circle */
+    .circle:hover {
+        cursor: pointer;
+    }
+
+    /* Per cambiare il colore della freccia quando col cursore vado all'interno del circle */
+    .circle:hover button {
+        border-color: rgba(166, 84, 237, 1);        
     }
 }
 
