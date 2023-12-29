@@ -27,7 +27,7 @@ function clickBehaviour_for_touchScreen(arrow_selector){
 ////////////////////////////////////////
 var id_active;
 
-$(".arrow.left").on("click", function(){
+$("#left_circle").on("click", function(){
     str_id_active = $(".slide_active").attr("id");      // Get attribute "id" number of the actived slide
 
     id_active = str_id_active[str_id_active.length-1];  // Get last element of the string
@@ -49,7 +49,7 @@ $(".arrow.left").on("click", function(){
 ////////////////////////////////////////
 //  NEXT ARROW
 ////////////////////////////////////////
-$(".arrow.right").on("click", function(){
+$("#right_circle").on("click", function(){
     str_id_active = $(".slide_active").attr("id");      // Get attribute "id" number of the actived slide
 
     id_active = str_id_active[str_id_active.length-1];  // Get last element of the string
