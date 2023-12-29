@@ -134,21 +134,22 @@ function resize_scroll() {
     // if($(window).width() <= 913){                             // NON usare .css("width") perche' va in errore (vedi console nel caso)
 
     if($(".menu_button_div").css("display") != "none"){
-      $(".menu_bar_div").css("position", "fixed");
-      $(".menu_bar_div").css("top", "10px");
-      $(".menu_bar_div").css("right", "10px");
-      $(".menu_bar_div").css("left", "10px");
 
       // In realta' questo if non servirebbe piu', ma quello che c'e' all'interno si
       if(XisPressed == false){
-        $(".content_div").css("margin-top", menu_bar_div_height + topDistance);
+        $(".content_div").css("padding-top", menu_bar_div_height);
         // console.log("X is NOT pressed");
       }
 
       $(".navbar_background").css("visibility", "visible");
 
-    } else {
+      $(".menu_bar_div").css("position", "fixed");
+      $(".menu_bar_div").css("top", "10px");
+      $(".menu_bar_div").css("right", "10px");
+      $(".menu_bar_div").css("left", "10px");
 
+    } else {
+      
       XisPressed = false;
       $(".navbar_background").removeAttr("style");
       $(".menu_bar_div").removeAttr("style");   // Rimuovo l'inline-css aggiunto nell'if
