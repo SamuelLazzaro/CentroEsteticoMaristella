@@ -1,6 +1,6 @@
 body {
-    /* background-color: #F9F5F6; */
-    background-color: #000000;
+    background-color: #F9F5F6;
+    /* background-color: #000000; */
     font-family: 'Alice', serif;
     margin: 10px;
 }
@@ -151,8 +151,8 @@ h2 {
     }
 
     .navbar_background {
-        /* background-color: #F9F5F6; */
-        background-color: #000000;
+        background-color: #F9F5F6;
+        /* background-color: #000000; */
         width: 100vw;
         /* height: 50px; */
         visibility: hidden;
@@ -492,7 +492,7 @@ svg {
 /*  ---------------------------     */
 
 :root {
-    --arrow-padding: 2vw;
+    --arrow-padding: 1vw;
 }
 
 .carousel_container {
@@ -523,7 +523,7 @@ svg {
 
 .arrow {
     border: solid #F9F5F6;
-    border-width: 0 1vw 1vw 0;
+    border-width: 0 0.5vw 0.5vw 0;
     display: inline-block;
     padding: var(--arrow-padding);
     /* Per rendere trasparente la restante parte del quadrato uso una opacity: 0 tramite rgba(0, 0, 0, 0) */
@@ -545,18 +545,18 @@ proprieta' di hover ha dei problemi con i dispositivi touch screen */
 .left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
-    left: 2.2vw;
+    left: 3.2vw;
     /* Formula per centrare verticalmente le arrows all'interno del container */
-    top: calc(32% - var(--arrow-padding)/2);
+    top: calc(42% - var(--arrow-padding)/2);
 }
 
 
 .right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
-    right: 2.2vw;
+    right: 3.2vw;
     /* Formula per centrare verticalmente le arrows all'interno del container */
-    top: calc(32% - var(--arrow-padding)/2);
+    top: calc(42% - var(--arrow-padding)/2);
 }
 
 .circle {
@@ -613,16 +613,38 @@ proprieta' di hover ha dei problemi con i dispositivi touch screen */
 /*  ---------------------------     */
 /*  ---------------------------     */
 .header_title {
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: center;
 }
 
+.price_tables_div {
+    margin: auto;   /* Per mantenere il tutto al centro */
+    width: fit-content;
+    display: grid;
+    row-gap: 30px;
+    column-gap: 50px;
+}
+
+@media (max-width: 950px) {
+    .price_tables_div {
+        /* Solo 1 colonna */
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 950px){
+    .price_tables_div {
+        /* 2 colonne */
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 .price_table {
-    width: 420px;
+    /* padding-left & padding-right sono necessari per mantenere un po' di spazio nel caso di display molto stretto, ossia con una width molto piccola, altrimenti la scritta andrebbe a ridosso dei bordi dello schermo */
     padding-left: 10px;
     padding-right: 10px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    /* border-collapse: collapse; */
+    border-spacing: 0;
 }
 
 .left_align {
@@ -633,24 +655,6 @@ proprieta' di hover ha dei problemi con i dispositivi touch screen */
 .right_align {
     text-align: right;
 }
-
-@media (max-width: 860px) {
-    .price_tables_div {
-        display: inline-block;
-        margin: auto;
-    }
-}
-
-@media (min-width: 860px){
-    .price_tables_div {
-        display: inline-flex;
-        margin: auto;
-    }
-}
-
-
-
-
 
 
 /*  ---------------------------     */
