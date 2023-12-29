@@ -12,6 +12,7 @@
 - Nel menu a tendina, se premo con il touch si vede un background strano, provare a risolvere togliendo l'hover come proprietà in tal caso
 - fare il border del menu_button_div di 2px invece di 1px? Chiedere a Gine
 - Nel caso di dispositivo NON touch, lasciare del margine in più a destra se non vi è la scrollbar
+- eliminare la ridondanza in header_navbar.html di phone_ul e laptop_ul: si potrebbe inserire un unico div e aggiungere o eliminare le classi in base alla width del display
 
 
 
