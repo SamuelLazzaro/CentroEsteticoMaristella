@@ -1,3 +1,11 @@
+:root {
+    --arrow-padding: 1vw;
+    --viso_corpo_card_img_size_px: 150px;
+    --viso_corpo_card_img_size_vw: 50vw;
+}
+
+
+
 body {
     background-color: #F9F5F6;
     /* background-color: #000000; */
@@ -38,12 +46,12 @@ h2 {
 
 /* Modifico la dimensione della width del title_div e del font-size dell'h1
  * per rendere responsive il logo fittizio */
-@media (min-width: 400px){
+@media (min-width: 401px){
     #title_div {
         width: 380px;
     }
 }
-@media (min-width: 340px) and (max-width: 400px){
+@media (min-width: 341px) and (max-width: 400px){
     #title_div {
         width: 320px;
     }
@@ -77,7 +85,7 @@ h2 {
 
 
 /*  Display pc / laptop / ipad  */
-@media (min-width: 950px){
+@media (min-width: 951px){
     .menu_button_div{
         /* Per non mostrare il pulsante menu nella navigation bar quando ho uno schermo piu' grande di 481px */
         display: none;
@@ -297,7 +305,28 @@ h2 {
 /*  ---------------------------     */
 /*  ---------------------------     */
 
-/* contenuto */
+/*  ---------------------------     */
+/*  ---------------------------     */
+/*           Generali               */
+/*  ---------------------------     */
+/*  ---------------------------     */
+.section_div {
+    text-align: center;
+    padding-bottom: 3vw;
+}
+
+.section_div h2 {
+    margin: 0px;
+    padding: calc(min(3vw, 10px));
+    font-size: 2.5rem;
+    /* display: inline-flex; */
+}
+
+.section_div p {
+    margin-bottom: 0px;
+    padding: 0px 50px;
+}
+
 .content_div {
     background-color: #FDCEDF;
     color: #8238c2;
@@ -305,7 +334,29 @@ h2 {
     /* z-index: 0; */
 }
 
-/* Trattamenti mani */
+.text_justify {
+    text-align: justify;
+}
+
+.p_justify {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    text-align: justify;
+    margin: auto;
+}
+
+.centered_ul {
+    display: inline-block;
+    text-align: left;
+}
+
+
+
+/*  ---------------------------     */
+/*  ---------------------------     */
+/*      Trattamenti mani            */
+/*  ---------------------------     */
+/*  ---------------------------     */
 .mani_ul {
     list-style: none;
     padding: 0px; /* per mantenere centrati i box rispetto al div */
@@ -340,41 +391,6 @@ h2 {
     height: 150px;
     width: 150px;
     padding: 10px;
-}
-
-/*  ---------------------------     */
-/*  ---------------------------     */
-/*          Promozioni              */
-/*  ---------------------------     */
-/*  ---------------------------     */
-.section_div {
-    text-align: center;
-    padding-bottom: 3vw;
-}
-
-.section_div h2 {
-    margin: 0px;
-    padding: calc(min(3vw, 10px));
-    font-size: 2.5rem;
-    /* display: inline-flex; */
-}
-
-.section_div p {
-    margin-bottom: 0px;
-    padding: 0px 50px;
-}
-
-.p_justify {
-    margin-left: 2vw;
-    margin-right: 2vw;
-    text-align: justify;
-
-    margin: auto;
-}
-
-.centered_ul {
-    display: inline-block;
-    text-align: left;
 }
 
 
@@ -434,19 +450,136 @@ svg {
     max-inline-size: 900px;
     margin: auto;
 }
-.machine_img {
-    /* width: min(150px, 50vw); */
-    width: min(150px, 50vw);
-    height: min(150px, 50vw);
-    margin: 20px;
-}
 
-.shape4plusText_div {
-    /* max-inline-size: 500px; */
+.shape4Plus_div p {
+    padding: 0px 20px;
 }
 
 .shape4Plus_div a {
     color: #8238c2;
+}
+
+.ul_viso_corpo > li {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.card_viso_corpo_div {
+    margin: auto;   /* Per mantenere il tutto al centro */
+    width: fit-content;
+    display: grid;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.card_viso_corpo {
+    width: fit-content;
+    max-width: 400px;
+}
+
+
+
+@media (max-width: 950px) {
+    .card_viso_corpo_div {
+        /* Solo 1 colonna */
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 951px){
+    .card_viso_corpo_div {
+        /* 2 colonne */
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* card_viso_corpo_img serve solamente per prendere sia viso_corpo_img_div sia viso_corpo_double_img_div */
+    /* Con questo CSS selector sto selezionando tutti i div che hanno class = "card_viso_corpo_img" e che si trovano all'interno di un div con class = "card_viso_corpo" */
+    .card_viso_corpo > div.card_viso_corpo_img {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);        /* Serve per centrare il div considerando left: 50% */
+    }
+
+    .big_height {
+        min-height: 770px;
+        position: relative;
+    }
+    
+    .small_height {
+        min-height: 550px;
+        position: relative;
+    }
+}
+
+.card_viso_corpo h3 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.card_viso_corpo p {
+    padding: 0px 20px;
+    margin-top: 5px;
+}
+
+.card_viso_corpo ul {
+    padding: 0px 40px;
+}
+
+.card_viso_corpo li {
+    margin: 5px 0px;
+}
+
+.viso_corpo_img_div {
+    width: fit-content;
+    border: 10px solid #8238c2;
+    border-radius: 50%;
+    margin: auto;       /* Per mettere l'immagine al centro */
+    background-color: #F8E8EE;
+    margin-bottom: 20px;
+}
+
+/* Ricordarsi di ritagliare tutte le immagini con Paint3D tramite una proporzione 1:1 */
+.viso_corpo_img_div img {
+    width: min(var(--viso_corpo_card_img_size_px), var(--viso_corpo_card_img_size_vw));
+    height: min(var(--viso_corpo_card_img_size_px), var(--viso_corpo_card_img_size_vw));
+    border-radius: 50%;     /* Per inserire l'immagine direttamente come se fosse in un cerchio */
+    margin: 20px;
+}
+
+.viso_corpo_double_img_div {
+    width: fit-content;
+    border: 10px solid #8238c2;
+    border-radius: 50%;
+    margin: auto;       /* Per mettere l'immagine al centro */
+    background-color: #F8E8EE;
+    margin-bottom: 20px;
+}
+
+.bioradiolift_div {
+    width: min(var(--viso_corpo_card_img_size_px), var(--viso_corpo_card_img_size_vw));
+    height: min(var(--viso_corpo_card_img_size_px), var(--viso_corpo_card_img_size_vw));
+    border-radius: 50%;     /* Per inserire l'immagine direttamente come se fosse in un cerchio */
+    margin: 20px;
+}
+
+.viso_corpo_double_img {
+    width: min(calc(var(--viso_corpo_card_img_size_px) * 2/3), calc(var(--viso_corpo_card_img_size_vw) * 2/3));
+    height: min(calc(var(--viso_corpo_card_img_size_px) * 2/3), calc(var(--viso_corpo_card_img_size_vw) * 2/3));
+    border-radius: 50%;     /* Per inserire l'immagine direttamente come se fosse in un cerchio */
+}
+
+.top_image {
+    position: relative;
+    left: min(calc(var(--viso_corpo_card_img_size_px) / 3), calc(var(--viso_corpo_card_img_size_vw) / 3));
+    z-index: 1;
+}
+
+.bottom_image {
+    position: relative;
+    bottom: min(calc(var(--viso_corpo_card_img_size_px) / 3), calc(var(--viso_corpo_card_img_size_vw) / 3));
+    left: 10px;
 }
 
 /*  ---------------------------     */
@@ -501,10 +634,6 @@ svg {
 /*             Centro               */
 /*  ---------------------------     */
 /*  ---------------------------     */
-
-:root {
-    --arrow-padding: 1vw;
-}
 
 .carousel_container {
     /* background-color: rgba(255, 255, 255, 0); */
@@ -654,7 +783,7 @@ proprieta' di hover ha dei problemi con i dispositivi touch screen */
     }
 }
 
-@media (min-width: 950px){
+@media (min-width: 951px){
     .price_tables_div {
         /* 2 colonne */
         grid-template-columns: 1fr 1fr;
