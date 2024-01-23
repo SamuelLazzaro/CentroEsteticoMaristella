@@ -454,6 +454,7 @@ svg {
     width: 250px; 
     /* max-width: 600px; */
     height: 350px;
+    border: 2px solid #A555EC;
     border-radius: 20px;
 }
 
