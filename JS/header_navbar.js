@@ -164,7 +164,19 @@ function resize_scroll() {
     $(".content_div").removeAttr("style");
 
   }
+
+  console.log("END");
 }
+
+
+
+
+(function runForever(){
+  // Do something here
+  console.log("Value = " + $(".menu_bar_div").outerHeight(true));
+
+  setTimeout(runForever, 100)
+})()
 
 /////////////////////////////////////////////
 // RESIZE
