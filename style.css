@@ -324,7 +324,7 @@ h2 {
 
 .section_div p {
     margin-bottom: 0px;
-    padding: 0px 50px;
+    padding: 0px 20px;
 }
 
 .content_div {
@@ -336,6 +336,8 @@ h2 {
 
 .text_justify {
     text-align: justify;
+    max-inline-size: 900px;
+    margin: auto;
 }
 
 .p_justify {
@@ -446,13 +448,34 @@ svg {
 /*             Viso                 */
 /*  ---------------------------     */
 /*  ---------------------------     */
+.trattamento_singolo {
+    background-color: #F9F5F6;
+    margin: auto;
+    width: 250px; 
+    /* max-width: 600px; */
+    height: 350px;
+    border-radius: 20px;
+}
+
+.find_more_button {
+    background-color: #F8E8EE;
+    color:#A555EC;
+    border: 2px solid #A555EC;
+    border-radius: 5px;
+}
+
+/* pointer: fine -> per non applicare queste proprieta' a dispositivi touch */
+@media(pointer: fine){
+    .find_more_button:hover{
+        background-color: #A555EC;
+        color: #F8E8EE;
+        cursor: pointer;
+    }
+}
+
 .shape4Plus_div {
     max-inline-size: 900px;
     margin: auto;
-}
-
-.shape4Plus_div p {
-    padding: 0px 20px;
 }
 
 .shape4Plus_div a {
@@ -479,14 +502,14 @@ svg {
 
 
 
-@media (max-width: 950px) {
+@media (max-width: 800px) {
     .card_viso_corpo_div {
         /* Solo 1 colonna */
         grid-template-columns: 1fr;
     }
 }
 
-@media (min-width: 951px){
+@media (min-width: 801px){
     .card_viso_corpo_div {
         /* 2 colonne */
         grid-template-columns: 1fr 1fr;
@@ -502,7 +525,7 @@ svg {
     }
 
     .big_height {
-        min-height: 770px;
+        min-height: 720px;
         position: relative;
     }
     
