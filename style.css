@@ -665,6 +665,34 @@ svg {
     }
 }
 
+.go_up_button_div {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    visibility: hidden;
+}
+
+.go_up_button_div svg {
+    padding-right: 0px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
+/* pointer: fine -> per non applicare queste proprieta' a dispositivi touch, in quanto la 
+proprieta' di hover ha dei problemi con i dispositivi touch screen */
+@media(pointer: fine){
+    .go_up_button_div svg:hover{
+        cursor: pointer;
+        background-color: #A555EC;
+        fill: #F8E8EE;
+        border-radius: 50%;
+    }
+}
+
 /*  ---------------------------     */
 /*  ---------------------------     */
 /*             Trucco               */
