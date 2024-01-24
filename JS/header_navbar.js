@@ -114,6 +114,21 @@ $(".laptop_ul a").on("click", function(){
 
 });
 
+// Funzione per gestire "Torna su" del pulsante che si trova in .go_up_button_div
+$(".go_up_button_div").on("click", function () {
+
+  if(isTouchDevice() == true){
+    $(".go_up_button_div svg").css("background-color", "#A555EC");
+    $(".go_up_button_div svg").css("fill", "#F8E8EE");
+  
+    setTimeout(function(){
+      $(".go_up_button_div svg").removeAttr("style");
+
+      $("html").animate({scrollTop:0}, 'slow');
+    }, 100);
+  }
+});
+
 
 function resize_scroll() {
   
@@ -137,10 +152,13 @@ function resize_scroll() {
   }
 
   if (windowScrollY >= topLimit) {
-    // Ho superato il limite di scrollY e sono in modalità cellulare
-    // if($(window).width() <= 913){                             // NON usare .css("width") perche' va in errore (vedi console nel caso)
+    // Ho superato il limite di scrollY
+
+    // Se supero il limite della navigation bar, allora rendo visibile il pulsante che si trova all'interno di go_up_button_div
+    $(".go_up_button_div").css("visibility", "visible");
 
     if($(".menu_button_div").css("display") != "none"){
+      // Ho superato il limite di scrollY e sono in modalita' cellulare
 
       // In realta' questo if non servirebbe piu', ma quello che c'e' all'interno si
       if(XisPressed == false){
@@ -155,13 +173,27 @@ function resize_scroll() {
       $(".menu_bar_div").css("right", "10px");
       $(".menu_bar_div").css("left", "10px");
 
+      $(".go_up_button_div").css("position", "absolute");
+
     } else {
-      // Ho superato il limite di scrollY ma sono in modalità laptop
+      // Ho superato il limite di scrollY ma sono in modalita' laptop
       
       XisPressed = false;
       $(".navbar_background").removeAttr("style");
       $(".menu_bar_div").removeAttr("style");   // Rimuovo l'inline-css aggiunto nell'if
       $(".content_div").removeAttr("style");
+
+      // Considero 90px in piu' in quanto se e' visibile la laptop_navbar non voglio vedere il pulsante interno a go_up_button_div
+      if(windowScrollY >= topLimit + 90)
+      {
+        // laptop_navbar non visibile, quindi fisso la posizione di go_up_button_div
+        $(".go_up_button_div").css("position", "fixed");        
+      }
+      else
+      {
+        // laptop_navbar visibile, quindi rimuovo la visibilita' del go_up_button_div
+        $(".go_up_button_div").removeAttr("style");
+      }
       
     }  
   } else {
@@ -171,6 +203,7 @@ function resize_scroll() {
     $(".navbar_background").removeAttr("style");
     $(".menu_bar_div").removeAttr("style");   // Rimuovo l'inline-css aggiunto nell'if
     $(".content_div").removeAttr("style");
+    $(".go_up_button_div").removeAttr("style");
 
   }
 
