@@ -33,6 +33,7 @@ $(".menu_button_div").on("click", function(){
 
   // Nascondo la scrollbar
   document.body.style.overflow = 'hidden';
+  $("html").css("touch-action", "none");
   $("body").css("margin-right", bodyMarginRight+"px");
   $(".menu_bar_div").css("right", bodyMarginRight+"px");
 
@@ -53,6 +54,7 @@ $(".menu_button_div").on("click", function(){
   if($(".menu_button_line#top").hasClass("menu_top_line_X")){
     $(".content_div").removeAttr("style");  // Necessario per far ricomparire il content_div quando dopo aver premuto il pulsante effettuo un resize laterale della schermata per poi premere la X
     document.body.style.overflow = 'visible';
+    $("html").removeAttr("style");    // Riabilito scroll su dispositivi touch screen
     // $("body").removeAttr("style");
     $(".menu_bar_div").css("right", bodyMarginRight+"px");
 
@@ -79,19 +81,13 @@ $(".phone_ul a").on("click", function(){
   id_li = $(this).attr("id");
 
   if(isTouchDevice() == true){
-
     $(".phone_ul a#" + id_li + " li").css("background-color", "#A555EC");
     $(".phone_ul a#" + id_li + " li").css("color", "#F8E8EE");
-
-    // Non funziona in quanto viene subito caricata la pagina successiva, eliminando quindi tutte le modifiche di stile inserite
-    // setTimeout(function(){
-    //   $(".phone_ul a#" + id_li + " li").removeAttr("style");
-    // }, 100);
-
   }
 
   //Da non inserire nel caso del laptop ???
   document.body.style.overflow = 'visible';
+  $("html").removeAttr("style");    // Riabilito scroll su dispositivi touch screen
   $("body").removeAttr("style");
   $(".menu_bar_div").css("right", bodyMarginRight+"px");
 
