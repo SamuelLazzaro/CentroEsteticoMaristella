@@ -29,9 +29,13 @@ $(".find_more_button").on("click", function () {
         setTimeout(function(){
             $("#" + button_clicked).removeAttr("style");
             // Eseguo uno scroll fino alla posizione Y che mi permette di vedere la sezione desiderata
-            window.scrollTo(0, posY);
+            // window.scrollTo(0, posY);
+            $("html").animate({scrollTop:posY}, 'slow');
         }, 100);
-
+    } else {
+        // Eseguo uno scroll fino alla posizione Y che mi permette di vedere la sezione desiderata
+        // window.scrollTo(0, posY);
+        $("html").animate({scrollTop:posY}, 'slow');
     }
     
 });
