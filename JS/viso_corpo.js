@@ -1,3 +1,7 @@
+function isTouchDevice() {
+    return (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
+  }
+
 // Click su pulsante "Scopri di più"
 $(".find_more_button").on("click", function () {
     var button_clicked = $(this).attr("id");
@@ -18,7 +22,16 @@ $(".find_more_button").on("click", function () {
         posY = $("#" + card_name).position().top + 5;
     }
 
-    // Eseguo uno scroll fino alla posizione Y che mi permette di vedere la sezione desiderata
-    window.scrollTo(0, posY);
+    if(isTouchDevice() == true){
+        $("#" + button_clicked).css("background-color", "#A555EC");
+        $("#" + button_clicked).css("color", "#F8E8EE");
+
+        setTimeout(function(){
+            $("#" + button_clicked).removeAttr("style");
+            // Eseguo uno scroll fino alla posizione Y che mi permette di vedere la sezione desiderata
+            window.scrollTo(0, posY);
+        }, 100);
+
+    }
     
 });
