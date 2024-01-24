@@ -128,9 +128,16 @@ function resize_scroll() {
   // var content_div_top = document.querySelector(".content_div").getBoundingClientRect().top;
   // var menu_bar_div_top = document.querySelector(".menu_bar_div").getBoundingClientRect().top;
 
-  $(".navbar_background").height(menu_bar_div_height + topDistance);
+  // Per evitare seguente bug: modalità phone, clicco su pulsante menu, scelgo nuovo menu, eseguo uno scroll fino in fondo, clicco
+  // nuovamente su pulsante menu, clicco sulla X per chiudere il menu, mi ritrovo una navbar_background che mi occupa tutto lo spazio in quanto
+  // menu_bar_div_height in quel caso ha un valore di oltre 800px. Con questo controllo evito in quel caso di assegnare una height enorme
+  // alla navbar_background.
+  if(menu_bar_div_height < 100){
+    $(".navbar_background").height(menu_bar_div_height + topDistance);
+  }
 
   if (windowScrollY >= topLimit) {
+    // Ho superato il limite di scrollY e sono in modalità cellulare
     // if($(window).width() <= 913){                             // NON usare .css("width") perche' va in errore (vedi console nel caso)
 
     if($(".menu_button_div").css("display") != "none"){
@@ -149,6 +156,7 @@ function resize_scroll() {
       $(".menu_bar_div").css("left", "10px");
 
     } else {
+      // Ho superato il limite di scrollY ma sono in modalità laptop
       
       XisPressed = false;
       $(".navbar_background").removeAttr("style");
@@ -157,6 +165,7 @@ function resize_scroll() {
       
     }  
   } else {
+    // Non ho superato il limite di scrollY
 
     XisPressed = false;
     $(".navbar_background").removeAttr("style");
@@ -165,18 +174,19 @@ function resize_scroll() {
 
   }
 
-  console.log("END");
 }
 
 
 
 
-(function runForever(){
-  // Do something here
-  console.log("Value = " + $(".menu_bar_div").outerHeight(true));
+// (function runForever(){
+//   // Do something here
+//   console.log("Value = " + $(".menu_bar_div").outerHeight(true));
 
-  setTimeout(runForever, 100)
-})()
+//   setTimeout(runForever, 100)
+// })()
+
+
 
 /////////////////////////////////////////////
 // RESIZE

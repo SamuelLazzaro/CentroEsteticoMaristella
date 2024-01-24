@@ -458,6 +458,14 @@ svg {
     border-radius: 20px;
 }
 
+.cards_trattamento_singolo_div {
+    margin: auto;   /* Per mantenere il tutto al centro */
+    width: fit-content;
+    display: grid;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
 .find_more_button {
     background-color: #F8E8EE;
     color:#A555EC;
@@ -471,6 +479,27 @@ svg {
         background-color: #A555EC;
         color: #F8E8EE;
         cursor: pointer;
+    }
+}
+
+@media (max-width: 600px) {
+    .cards_trattamento_singolo_div {
+        /* Solo 1 colonna */
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px){
+    .cards_trattamento_singolo_div {
+        /* 2 colonne */
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1201px) {
+    .cards_trattamento_singolo_div {
+        /* 4 colonne */
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
 
@@ -526,7 +555,7 @@ svg {
     }
 
     .big_height {
-        min-height: 720px;
+        min-height: 740px;
         position: relative;
     }
     
