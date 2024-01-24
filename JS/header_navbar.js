@@ -101,11 +101,6 @@ $(".laptop_ul a").on("click", function(){
     $(".laptop_ul a#" + id_li + " li").css("background-color", "#A555EC");
     $(".laptop_ul a#" + id_li + " li").css("color", "#F8E8EE");
     $(".laptop_ul a#" + id_li + " li").css("border-radius", "5px");
-
-    // Non funziona in quanto viene subito caricata la pagina successiva, eliminando quindi tutte le modifiche di stile inserite
-    // setTimeout(function(){
-    //   $(".laptop_ul a#" + id_li + " li").removeAttr("style");
-    // }, 100);
   }
 
 });
