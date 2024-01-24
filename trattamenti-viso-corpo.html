@@ -29,7 +29,7 @@
         <div class="section_div">
             <h2>Trattamenti viso e corpo:</h2>
 
-            <div class="card_viso_corpo_div">
+            <div class="cards_trattamento_singolo_div">
                 <div class="trattamento_singolo">
                     <h3>Shape 4 Plus</h3>
     
@@ -37,7 +37,7 @@
                         <img src="./images/Macchinari/4shape.png" alt="4ShapePlus" class="machine_img"/>
                     </div>
     
-                    <button name="button" class="find_more_button">Scopri di più</button>
+                    <button name="button" class="find_more_button" id="shape4Plus_button">Scopri di più</button>
                 </div>
     
                 <div class="trattamento_singolo">
@@ -47,7 +47,7 @@
                         <img src="./images/Macchinari/overDepyA.jpg" alt="Over Depy A"/>
                     </div>
     
-                    <button name="button" class="find_more_button">Scopri di più</button>
+                    <button name="button" class="find_more_button" id="overDepyA_button">Scopri di più</button>
                 </div>
     
                 <div class="trattamento_singolo">
@@ -57,25 +57,29 @@
                         <img src="./images/Macchinari/asoderm_damia.jpg" alt="Asoderma Damia"/>
                     </div>
     
-                    <button name="button" class="find_more_button">Scopri di più</button>
+                    <button name="button" class="find_more_button" id="asodermaDamia_button">Scopri di più</button>
                 </div>
     
                 <div class="trattamento_singolo">
                     <h3>Hartur One</h3>
     
                     <div class="viso_corpo_img_div">
-                        <img src="./images/Macchinari/asoderm_damia.jpg" alt="Asoderma Damia"/>
+                        <img src="./images/Macchinari/hartur_one.jpg" alt="Hartur One"/>
                     </div>
                 
-                    <button name="button" class="find_more_button">Scopri di più</button>
+                    <button name="button" class="find_more_button" id="harturOne_button">Scopri di più</button>
                 </div>
             </div>
 
-
+            <!-- Da togliere <br> -->
+            <br>
+            <br>
+            <br>
+            <br>
 
             <!-- Shape 4 Plus -->
             <div class="shape4Plus_div">
-                <h2>Shape 4 Plus</h2>
+                <h2 id="shape4Plus_header">Shape 4 Plus</h2>
                 <div class="viso_corpo_img_div">
                     <img src="./images/Macchinari/4shape.png" alt="4ShapePlus" class="machine_img"/>
                 </div>
@@ -231,7 +235,7 @@
 
             <!-- OVER DEPY A -->
             <div class="overDepyA">
-                <h2>Depilazione con OVER DEPY A</h2>
+                <h2 id="overDepyA_header">Depilazione con OVER DEPY A</h2>
                 
                 <div class="viso_corpo_img_div">
                     <img src="./images/Macchinari/overDepyA.jpg" alt="Over Depy A"/>
@@ -250,7 +254,7 @@
 
             <!-- ASODERMA DAMIA -->
             <div class="asodermaDamia">
-                <h2>Stimolazione elettronica a frequenza controllata</h2>
+                <h2  id="asodermaDamia_header">Stimolazione elettronica a frequenza controllata</h2>
                 
                 <div class="viso_corpo_img_div">
                     <img src="./images/Macchinari/asoderm_damia.jpg" alt="Asoderma Damia"/>
@@ -277,8 +281,45 @@
                 </p>
             </div>
 
+            <!-- Da togliere <br> -->
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <!-- HARTUR ONE -->
+            <div class="harturOne">
+                <h2 id="harturOne_header">Hartur One</h2>
+                
+                <div class="viso_corpo_img_div">
+                    <img src="./images/Macchinari/hartur_one.jpg" alt="Hartur One"/>
+                </div>
+
+                <p class="text_justify">
+                    Risultati sorprendenti grazie alla stimolazione elettronica a frequenza controllata.
+                    La gamma di frequenze della nuova serie di strumenti DAMIA consente applicazioni particolari e risultati impressionanti.
+                </p>
+                <br>
+                <p class="text_justify">
+                    E' caratteristica di questo trattamento una stimolazione che risulta essere ottimale nei casi di insufficienza circolatoria e conseguente alterazione del ricambio cellulare (seborrea, acne, invecchiamento precoce della cute).
+                    L'aumento della circolazione cutanea favorisce l'azione delle sostanze attive contenute nelle composizioni cosmetiche.
+                    Ha inoltre un'azione energetica, che favorisce un più accelerato ricambio, stimola la circolazione del sangue, e facilita la disintossicazione.
+                </p>
+                <br>
+                <p class="text_justify">
+                    L'alta frequenza aumenta l'attività ghiandolare, stimola la circolazione sanguigna, ha un'azione germicida, aiuta un assorbimento profondo dei principi attivi cosmetici, migliora i processi di ossido-riduzione. Ha un'azione cicatrizzante e rigenerante.
+                </p>
+                <br>
+                <p class="text_justify">
+                    L'elettrodo a cipolla o a cipollina, particolarmente indicato nel massaggio delle piccole parti come solchi labbiali, naso, zampe d'oca, orbicolari, può essere usato anche per un'azione rassodante nei contorni del viso.
+                    Garantisce una perfetta penetrazione dei prodotti Damia, opportunamento ionizzati.                    
+                </p>
+            </div>
+
         </div>
     </div>
+
+    <script src="./JS/viso_corpo.js" charset="UTF-8"></script>
 
 </body>
 
