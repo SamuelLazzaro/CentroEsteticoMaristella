@@ -13,7 +13,6 @@
 - fare il border del menu_button_div di 2px invece di 1px? Chiedere a Gine
 - Nel caso di dispositivo NON touch, lasciare del margine in più a destra se non vi è la scrollbar
 - eliminare la ridondanza in header_navbar.html di phone_ul e laptop_ul: si potrebbe inserire un unico div e aggiungere o eliminare le classi in base alla width del display
-- sistemare problema menu_bar_div.height nel caso di click su nuovo pulsante + scroll tutto in basso + click su X
 - sistemare big_height, small_height e position nel caso in cui diminuisco la max-width e min-width del @media per card_viso_corpo_div
 
 
