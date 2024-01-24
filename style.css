@@ -854,6 +854,7 @@ proprieta' di hover ha dei problemi con i dispositivi touch screen */
 .price_tables_div {
     margin: auto;   /* Per mantenere il tutto al centro */
     width: fit-content;
+    /* height: 800px;  Per non avere tutte le righe troppo compatte. Da modificare se si aggiungono altre righe */
     display: grid;
     row-gap: 30px;
     column-gap: 50px;
@@ -870,6 +871,7 @@ proprieta' di hover ha dei problemi con i dispositivi touch screen */
     .price_tables_div {
         /* 2 colonne */
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: 400px 400px;    /* Per non avere le righe tutte ammassate. Da modificare se si aggiungono nuove righe per ogni table */
     }
 }
 
