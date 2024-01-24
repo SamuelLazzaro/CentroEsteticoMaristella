@@ -114,6 +114,7 @@ $(".laptop_ul a").on("click", function(){
 $(".go_up_button_div").on("click", function () {
 
   if(isTouchDevice() == true){
+
     $(".go_up_button_div svg").css("background-color", "#A555EC");
     $(".go_up_button_div svg").css("fill", "#F8E8EE");
   
@@ -122,6 +123,10 @@ $(".go_up_button_div").on("click", function () {
 
       $("html").animate({scrollTop:0}, 'slow');
     }, 100);
+    
+  } else {
+    // Se non e' un dispositivo touch eseguo solamente lo scroll in quanto la parte dello stile viene gestita da style.css
+    $("html").animate({scrollTop:0}, 'slow');
   }
 });
 
