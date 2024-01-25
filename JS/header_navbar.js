@@ -169,6 +169,8 @@ function resize_scroll() {
       $(".menu_bar_div").css("right", "10px");
       $(".menu_bar_div").css("left", "10px");
 
+      $(".go_up_button_div").css("right", "10px");    // Deve essere uguale al 'right': presente in style.css 
+      $(".go_up_button_div").css("top", "10px");      // Deve essere uguale al 'top' presente in style.css 
       $(".go_up_button_div").css("position", "absolute");
 
     } else {
@@ -183,7 +185,10 @@ function resize_scroll() {
       if(windowScrollY >= topLimit + 90)
       {
         // laptop_navbar non visibile, quindi fisso la posizione di go_up_button_div
-        $(".go_up_button_div").css("position", "fixed");        
+        $(".go_up_button_div").css("position", "fixed");
+        $(".go_up_button_div").css("right", "20px");
+        $(".go_up_button_div").css("top", "20px");
+
       }
       else
       {
