@@ -57,7 +57,7 @@ h2 {
     }
 
     h1 {
-        font-size: 1.6em;
+        font-size: 1.6rem;
     }
 }
 @media (max-width: 340px){
@@ -66,7 +66,7 @@ h2 {
     }
 
     h1 {
-        font-size: 1.4em;
+        font-size: 1.4rem;
     }
 }
 
@@ -83,7 +83,7 @@ h2 {
     color: #A555EC;
     background-color: #F8E8EE;
     padding: 0px;
-    font-size: 14px;
+    font-size: 1rem;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
 }
@@ -262,7 +262,7 @@ h2 {
     .phone_ul {
         list-style: none;
         text-align: start;
-        font-size: 1rem;
+        font-size: 1.2rem;
         padding-inline-start: 0px;
         padding: 0px;
         margin: 0px;
@@ -372,7 +372,7 @@ h2 {
 
 .mani_ul li{
     padding: 5px;
-    font-size: 1.0rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 
@@ -476,6 +476,7 @@ svg {
     color:#A555EC;
     border: 2px solid #A555EC;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
 /* pointer: fine -> per non applicare queste proprieta' a dispositivi touch */
@@ -517,11 +518,6 @@ svg {
     color: #8238c2;
 }
 
-.ul_viso_corpo > li {
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
 .card_viso_corpo_div {
     margin: auto;   /* Per mantenere il tutto al centro */
     width: fit-content;
@@ -534,8 +530,6 @@ svg {
     width: fit-content;
     max-width: 400px;
 }
-
-
 
 @media (max-width: 800px) {
     .card_viso_corpo_div {
@@ -940,7 +934,7 @@ proprieta' di hover ha dei problemi con i dispositivi touch screen */
     color: #F9F5F6;
     background-color: #F195B7;
     text-align: center;
-    font-size: 12px;
+    font-size: 0.8rem;
     padding: 15px;
     clear: both;
     border-bottom-right-radius: 15px;
