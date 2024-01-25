@@ -671,18 +671,20 @@ svg {
 }
 
 .go_up_button_div {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #A555EC;
+    border-radius: 50%;
     position: absolute;
-    right: 15px;
-    top: 15px;
+    right: 10px;        /* Se si cambia bisogna cambiare anche in $(".go_up_button_div") in header_navbar.js */
+    top: 10px;          /* Se si cambia bisogna cambiare anche in $(".go_up_button_div") in header_navbar.js */
     visibility: hidden;
 }
 
 .go_up_button_div svg {
     padding-right: 0px;
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
 }
 
@@ -690,11 +692,13 @@ svg {
 /* pointer: fine -> per non applicare queste proprieta' a dispositivi touch, in quanto la 
 proprieta' di hover ha dei problemi con i dispositivi touch screen */
 @media(pointer: fine){
-    .go_up_button_div svg:hover{
+    .go_up_button_div:hover{
         cursor: pointer;
         background-color: #A555EC;
+    }
+
+    .go_up_button_div:hover svg {
         fill: #F8E8EE;
-        border-radius: 50%;
     }
 }
 
