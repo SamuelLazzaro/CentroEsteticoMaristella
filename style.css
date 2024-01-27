@@ -751,7 +751,7 @@ proprieta' di hover ha dei problemi con i dispositivi touch screen */
 
 .carousel_container {
     /* background-color: rgba(255, 255, 255, 0); */
-    width: 70vw;
+    width: 80vw;
     margin: auto;
     margin-top: 20px;
     /* padding-top: calc((min(10%, 50px)));
@@ -761,9 +761,20 @@ proprieta' di hover ha dei problemi con i dispositivi touch screen */
 }
 
 .centro_img {
-    width: 70vw;
+    width: 80vw;
     /* Per avere un formato 16:9 -> 60vw : 16 = x : 9 -> x = (60 * 9 / 16)vw */
-    height: 40vw;
+    height: 50vw;
+}
+
+@media (max-width: 600px){
+    .carousel_container {
+        width: 90vw;
+    }
+
+    .centro_img {
+        width: 90vw;
+        height: 55vw;
+    }
 }
 
 /* Imposto di default tutte le immagini con display: none, successivamente aggiungo nel index.html la classe .slide_active
