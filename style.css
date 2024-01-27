@@ -766,7 +766,7 @@ proprieta' di hover ha dei problemi con i dispositivi touch screen */
     height: 40vw;
 }
 
-/* Imposto di default tutte le immagini con display: none, successivamente aggiungo nel centro.html la classe .slide_active
+/* Imposto di default tutte le immagini con display: none, successivamente aggiungo nel index.html la classe .slide_active
    in modo tale da rendere visibile solamente una immagine */
 .slide_img {
     display: none;
