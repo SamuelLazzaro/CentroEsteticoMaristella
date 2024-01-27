@@ -30,16 +30,17 @@ var id_active;
 $("#left_circle").on("click", function(){
     str_id_active = $(".slide_active").attr("id");      // Get attribute "id" number of the actived slide
 
-    id_active = str_id_active[str_id_active.length-1];  // Get last element of the string
+    id_active = str_id_active.slice(str_id_active.indexOf('_') + 1);  // Get number after '_' character
 
+    console.log("id = " + id_active);
     $(".slide_active").removeClass("slide_active");
     $(".slide_indicator").removeAttr("style");
 
     if(id_active == 1){
-        $("#slide" + num_images).addClass("slide_active");
+        $("#slide_" + num_images).addClass("slide_active");
         $("#b" + num_images).css("background-color", "#A555EC");
     }else{
-        $("#slide" + (--id_active)).addClass("slide_active");
+        $("#slide_" + (--id_active)).addClass("slide_active");
         $("#b" + (id_active)).css("background-color", "#A555EC");
     }
 
@@ -52,16 +53,16 @@ $("#left_circle").on("click", function(){
 $("#right_circle").on("click", function(){
     str_id_active = $(".slide_active").attr("id");      // Get attribute "id" number of the actived slide
 
-    id_active = str_id_active[str_id_active.length-1];  // Get last element of the string
+    id_active = str_id_active.slice(str_id_active.indexOf('_') + 1);  // Get number after '_' character
 
     $(".slide_active").removeClass("slide_active");
     $(".slide_indicator").removeAttr("style");
 
     if(id_active == num_images){
-        $("#slide1").addClass("slide_active");
+        $("#slide_1").addClass("slide_active");
         $("#b1").css("background-color", "#A555EC");
     }else{
-        $("#slide" + (++id_active)).addClass("slide_active");
+        $("#slide_" + (++id_active)).addClass("slide_active");
         $("#b" + (id_active)).css("background-color", "#A555EC");
     }
 
@@ -78,7 +79,7 @@ $(".slide_indicator").on("click", function(){
     $(".slide_active").removeClass("slide_active");
     $(".slide_indicator").removeAttr("style");
 
-    $("#slide" + button_id).addClass("slide_active");
+    $("#slide_" + button_id).addClass("slide_active");
     $("#b" + button_id).css("background-color", "#A555EC");
 
 });
