@@ -74,7 +74,7 @@ $("#right_circle").on("click", function(){
 ////////////////////////////////////////
 $(".slide_indicator").on("click", function(){
     var button_str_id = $(this).attr("id");
-    var button_id = button_str_id[1];
+    var button_id = button_str_id.slice(1);     // .slice(1) in quanto id="bXXX" quindi prendo tutto cio' che c'e' dopo la 'b'
     
     $(".slide_active").removeClass("slide_active");
     $(".slide_indicator").removeAttr("style");
