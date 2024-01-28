@@ -936,6 +936,32 @@ proprieta' di hover ha dei problemi con i dispositivi touch screen */
 }
 
 
+
+
+
+
+
+
+
+/*  ---------------------------     */
+/*  ---------------------------     */
+/*            Video                 */
+/*  ---------------------------     */
+/*  ---------------------------     */
+
+.div_video_horizontal {
+    margin: auto;
+    width: min(860px, calc(100vw - 60px));
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+video {
+    width: min(860px, calc(100vw - 60px));  /* */
+    object-fit: cover;
+}
+
 /*  ---------------------------     */
 /*  ---------------------------     */
 /*  ---------------------------     */
