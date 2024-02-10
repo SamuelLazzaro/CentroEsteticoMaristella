@@ -21,7 +21,61 @@
 <body>
 
     <!-- Header & Navigation Bar-->
-    <div class="header_navbar"></div>
+    <div id="title_div">
+        <h1>Centro Estetico Maristella</h1>
+        <p>Non rinunciare mai a te stessa!</p>
+    </div>
+    
+    <div class="navbar_background"></div>
+    
+    <!-- Navigation Bar -->
+    <div class="menu_bar_div">
+      <!-- Laptop -->
+        <div class="laptop_nav_bar_div">
+            <ul class="laptop_ul">
+                <a id="1" href="./index.html"><li>Home</li></a>
+                <a id="2" href="./trattamenti-viso-corpo.html"><li>Trattamenti viso e corpo</li></a>
+                <a id="3" href="./trattamenti-mani.html"><li>Trattamenti mani</li></a>
+                <a id="4" href="./trattamenti-piedi.html"><li>Trattamenti piedi</li></a>
+                <a id="5" href="./massaggi.html"><li>Massaggi</li></a>
+                <a id="6" href="./trucco.html"><li>Trucco correttivo</li></a>
+                <a id="7" href="./laminazione-ciglia.html"><li>Laminazione ciglia</li></a>
+                <a id="8" href="./prezzi.html"><li>Listino prezzi</li></a>
+                <a id="9" href="./promozioni.html"><li>Promozioni</li></a>
+                <a id="10" href="./contatti.html"><li>Contatti</li></a>
+            </ul>
+        </div>
+      
+      <!-- Phone -->
+      <!-- https://getbootstrap.com/docs/5.3/components/button-group/ -->
+        <div class="menu_button_div three_lines">
+            <div class="menu_button_line" id="top"></div>
+            <div class="menu_button_line" id="center"></div>
+            <div class="menu_button_line" id="bottom"></div>
+        </div>
+    
+        <div class="go_up_button_div">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/>
+            </svg>
+        </div>
+    
+        <div id="show_hide_phone_navbar" class="phone_nav_bar_div" style="display: none;">
+            <ul class="phone_ul">
+                <a id="1" href="./index.html"><li>Home</li></a>
+                <a id="2" href="./trattamenti-viso-corpo.html"><li>Trattamenti viso e corpo</li></a>
+                <a id="3" href="./trattamenti-mani.html"><li>Trattamenti mani</li></a>
+                <a id="4" href="./trattamenti-piedi.html"><li>Trattamenti piedi</li></a>
+                <a id="5" href="./massaggi.html"><li>Massaggi</li></a>
+                <a id="6" href="./trucco.html"><li>Trucco correttivo</li></a>
+                <a id="7" href="./laminazione-ciglia.html"><li>Laminazione ciglia </li></a>
+                <a id="8" href="./prezzi.html"><li>Listino prezzi</li></a>
+                <a id="9" href="./promozioni.html"><li>Promozioni</li></a>
+                <a id="10" href="./contatti.html"><li>Contatti</li></a>
+            </ul>
+        </div>
+    
+    </div>
 
     <!-- Contenuto -->
     <div class="content_div">
@@ -128,6 +182,9 @@
             </div>
         </div>
     </div>
+
+    <!-- Includo il file Javascript che contiene la logica dell'header_navbar -->
+    <script src="./JS/header_navbar.js" charset="UTF-8"></script>
 
 </body>
 
