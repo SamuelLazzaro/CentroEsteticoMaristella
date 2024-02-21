@@ -678,6 +678,7 @@ svg {
     right: 10px;        /* Se si cambia bisogna cambiare anche in $(".go_up_button_div") in header_navbar.js */
     top: 10px;          /* Se si cambia bisogna cambiare anche in $(".go_up_button_div") in header_navbar.js */
     visibility: hidden;
+    z-index: 4;     /* Per avere il pulsante Go Up sopra il div delle immagini della home, il quale occupa tutta la larghezza della window quindi creava problemi nel premere il pulsante */
 }
 
 .go_up_button_div svg {
