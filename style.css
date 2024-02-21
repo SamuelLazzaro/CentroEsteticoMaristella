@@ -915,7 +915,7 @@ proprieta' di hover ha dei problemi con i dispositivi touch screen */
     .price_tables_div {
         /* 2 colonne */
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 400px 400px;    /* Per non avere le righe tutte ammassate. Da modificare se si aggiungono nuove righe per ogni table */
+        grid-template-rows: 500px 500px;    /* Per non avere le righe tutte ammassate. Da modificare se si aggiungono nuove righe per ogni table */
     }
 }
 
