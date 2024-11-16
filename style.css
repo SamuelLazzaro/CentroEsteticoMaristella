@@ -954,6 +954,16 @@ proprieta' di hover ha dei problemi con i dispositivi touch screen */
     margin: 20px;
 }
 
+.div_video_vertical {
+    margin: 20px;
+}
+
+.video_vertical {
+    max-width: 400px;
+    object-fit: cover;
+    aspect-ratio: 9/16 !important;
+}
+
 video {
     width: 100%;
     max-width: 860px;
