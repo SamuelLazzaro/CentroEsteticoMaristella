@@ -1,73 +1,73 @@
-Trattamento;Id;Prezzo;
-Completa Integrale;1;32.00;
-Integr + braccia + baff + soprac + asc;2;60.00;
-Completa (Gambe intere);3;29.00;
-Mezza gamba superiore + inguine;4;24.00;
-Mezza gamba sup. + inguine integr.;5;26.00;
-Mezza gamba superiore;6;19.00;
-Mezza gamba inferiore + inguine;7;22.00;
-Mezza gamba inf. + inguine integr.;8;24.00;
-Mezza gamba inferiore;9;17.00;
-Viso + sopracciglia + baffetto;10;19.00;
-Braccia;11;16.00;
-Inguine;12;10.00;
-Inguine integrale;13;12.00;
-Ascelle;14;10.00;
-Petto e addome;15;19.00;
-Schiena e spalle;16;19.00;
-Baffetto;17;8.00;
-Sopracciglia;18;9.00;
-Inguine + glutei + pancia;19;16.00;
-Baffetto + mento;20;11.00;
-Lobi orecchie;21;8.00;
-Glutei + fondo schiena;22;10.00;
-Baffetto + sopracciglia;23;13.00;
-4Shape Plus viso;24;100.00;
-Trattamentp ultrasuoni viso;25;52.00;
-Pulizia viso + massaggio;26;44.00;
-Trattamento collagene;27;22.00;
-Trattamento acne;28;22.00;
-Trattamento per pelli sensibili;29;22.00;
-Pulizia viso met. Arosha con acidi;30;72.00;
-Trattamento anti-age;31;26.00;
-Trattamento ultrasuoni;32;53.00;
-Trattamento seno;33;49.00;
-Trucco;34;30.00;
-Trucco sposa nel centro;35;48.00;
-Trucco sposa in prova;36;33.00;
-Trucco sposa a domicilio;37;85.00;
-Radiofrequenza;38;72.00;
-Elettrocoagulazione;39;2.00;
-Laminazione ciglia;40;55.00;
-Pulizia viso + ultrasuoni;41;70.00;
-Pulizia viso + scrub corpo;42;62.00;
-Manicure;43;19.00;
-Manicure con smalto semplice;44;21.00;
-Manicure con smalto semipermanente;45;30.00;
-Manicure + trattamento paraffina;46;29.00;
-Ricostruzione unghie mani;47;70.00;
-Ritocco ricostruzione mani;48;50.00;
-Pedicure;49;29.00;
-Pedicure + trattamento paraffina;50;39.00;
-Pedicure con smalto semipermanente;51;39.00;
-Pedicure con smalto semplice;52;31.00;
-Ricostruzione unghia podologica;53;52.00;
-Ritocco unghia podologica;54;42.00;
-Applicazione smalto semipermanente;55;16.00;
-Applicazione smalto semplice;56;6.00;
-Taglio unghie;57;11.00;
-Limatura unghie;58;6.00;
-4Shape Plus corpo;59;100.00;
-Peeling corpo + massaggio;60;72.00;
-Fanghi Mar Morto + massaggio;61;77.00;
-Bendaggi + massaggio parziale;62;65.00;
-Ultrasuoni radiofr. e Hartur One;63;122.00;
-Trattamento con Hartur One;64;52.00;
-Radiofrequenza;65;72.00;
-Doccia solare;66;10.00;
-Massaggio rilassante 60 minuti;67;45.00;
-Massaggio linfodrenante 60 minuti;68;53.00;
-Massaggio linfodrenante parz. 40 min.;69;43.00;
-Massaggio schiena 20 minuti;70;28.00;
-Massaggio anticellulite;71;53.00;
-Massaggio anticellulite parziale;72;43.00;
+Trattamento;Id;Prezzo
+Completa Integrale;1;32,00
+Integr + braccia + baff + soprac + asc;2;60,00
+Completa (Gambe intere);3;29,00
+Mezza gamba superiore + inguine;4;24,00
+Mezza gamba sup. + inguine integr.;5;26,00
+Mezza gamba superiore;6;19,00
+Mezza gamba inferiore + inguine;7;22,00
+Mezza gamba inf. + inguine integr.;8;24,00
+Mezza gamba inferiore;9;17,00
+Viso + sopracciglia + baffetto;10;19,00
+Braccia;11;16,00
+Inguine;12;10,00
+Inguine integrale;13;12,00
+Ascelle;14;10,00
+Petto e addome;15;19,00
+Schiena e spalle;16;19,00
+Baffetto;17;8,00
+Sopracciglia;18;9,00
+Inguine + glutei + pancia;19;16,00
+Baffetto + mento;20;11,00
+Lobi orecchie;21;8,00
+Glutei + fondo schiena;22;10,00
+Baffetto + sopracciglia;23;13,00
+4Shape Plus viso;24;100,00
+Trattamentp ultrasuoni viso;25;52,00
+Pulizia viso + massaggio;26;44,00
+Trattamento collagene;27;22,00
+Trattamento acne;28;22,00
+Trattamento per pelli sensibili;29;22,00
+Pulizia viso met. Arosha con acidi;30;72,00
+Trattamento anti-age;31;26,00
+Trattamento ultrasuoni;32;53,00
+Trattamento seno;33;49,00
+Trucco;34;30,00
+Trucco sposa nel centro;35;48,00
+Trucco sposa in prova;36;33,00
+Trucco sposa a domicilio;37;85,00
+Radiofrequenza;38;72,00
+Elettrocoagulazione;39;2,00
+Laminazione ciglia;40;55,00
+Pulizia viso + ultrasuoni;41;70,00
+Pulizia viso + scrub corpo;42;62,00
+Manicure;43;19,00
+Manicure con smalto semplice;44;21,00
+Manicure con smalto semipermanente;45;30,00
+Manicure + trattamento paraffina;46;29,00
+Ricostruzione unghie mani;47;70,00
+Ritocco ricostruzione mani;48;50,00
+Pedicure;49;29,00
+Pedicure + trattamento paraffina;50;39,00
+Pedicure con smalto semipermanente;51;39,00
+Pedicure con smalto semplice;52;31,00
+Ricostruzione unghia podologica;53;52,00
+Ritocco unghia podologica;54;42,00
+Applicazione smalto semipermanente;55;16,00
+Applicazione smalto semplice;56;6,00
+Taglio unghie;57;11,00
+Limatura unghie;58;6,00
+4Shape Plus corpo;59;100,00
+Peeling corpo + massaggio;60;72,00
+Fanghi Mar Morto + massaggio;61;77,00
+Bendaggi + massaggio parziale;62;65,00
+Ultrasuoni radiofr. e Hartur One;63;122,00
+Trattamento con Hartur One;64;52,00
+Radiofrequenza;65;72,00
+Doccia solare;66;10,00
+Massaggio rilassante 60 minuti;67;45,00
+Massaggio linfodrenante 60 minuti;68;53,00
+Massaggio linfodrenante parz. 40 min.;69;43,00
+Massaggio schiena 20 minuti;70;28,00
+Massaggio anticellulite;71;53,00
+Massaggio anticellulite parziale;72;43,00
