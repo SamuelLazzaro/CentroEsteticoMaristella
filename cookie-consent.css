@@ -1,0 +1,51 @@
+/* Cookie Notice – v2.0 – solo tecnici, senza <footer>, con body bump */
+:root {
+  --cn-bg: #111827;      /* grigio molto scuro */
+  --cn-fg: #ffffff;
+  --cn-muted: #9ca3af;
+  --cn-accent: #60a5fa;  /* azzurro link */
+  --cn-ok: #10b981;
+  --cn-radius: 14px;
+  --cn-shadow: 0 10px 24px rgba(0,0,0,.25);
+  --cn-z: 2147483000;
+  --cn-font: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Spazio quando il banner è visibile per non coprire il footer */
+body.cn-has-banner { padding-bottom: var(--cn-bump, 120px); }
+
+.cn-hidden { display: none !important; }
+
+.cn-banner {
+  font-family: var(--cn-font);
+  position: fixed; left: 16px; right: 16px; bottom: 16px;
+  background: var(--cn-bg); color: var(--cn-fg);
+  border-radius: var(--cn-radius);
+  box-shadow: var(--cn-shadow);
+  padding: 16px; z-index: var(--cn-z);
+  display: grid; gap: 12px; grid-template-columns: 1fr; align-items: start;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+.cn-banner h3 { margin: 0; font-size: 16px; font-weight: 700; }
+.cn-banner p  { margin: 0; font-size: 14px; color: var(--cn-muted); line-height: 1.45; }
+
+.cn-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+.cn-btn {
+  appearance: none; border: 0; cursor: pointer; line-height: 1;
+  padding: 10px 14px; border-radius: 10px; font-weight: 600; font-size: 14px;
+}
+.cn-btn-primary { background: var(--cn-ok); color: #fff; }
+.cn-btn-ghost   { background: transparent; border: 1px solid #374151; color: #fff; }
+
+.cn-link { color: var(--cn-accent); text-decoration: underline; text-underline-offset: 2px; }
+
+@media (min-width: 720px) {
+  .cn-banner { grid-template-columns: 1fr auto; padding: 18px 20px; }
+  .cn-actions { justify-content: end; }
+}
+
+/* Pulsante chiudi (opzionale) */
+.cn-x {
+  background: transparent; border: 0; color: #fff; font-size: 20px;
+  cursor: pointer; line-height: 1; padding: 6px; margin-left: -6px;
+}
