@@ -952,6 +952,7 @@ proprieta' di hover ha dei problemi con i dispositivi touch screen */
 
 .div_video_horizontal {
     margin: 20px;
+    aspect-ratio: 16/9;
 }
 
 .div_video_vertical {
@@ -969,7 +970,6 @@ video {
     max-width: 860px;
 
     object-fit: cover;
-    aspect-ratio: 16/9;
 }
 
 /*  ---------------------------     */
