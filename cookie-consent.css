@@ -1,9 +1,9 @@
-/* Cookie Notice – v2.0 – solo tecnici, senza <footer>, con body bump */
+/* Cookie Notice – v3.0 – tecnici + Google Maps, con body bump */
 :root {
-  --cn-bg: #111827;      /* grigio molto scuro */
+  --cn-bg: #111827;
   --cn-fg: #ffffff;
   --cn-muted: #9ca3af;
-  --cn-accent: #60a5fa;  /* azzurro link */
+  --cn-accent: #60a5fa;
   --cn-ok: #10b981;
   --cn-radius: 14px;
   --cn-shadow: 0 10px 24px rgba(0,0,0,.25);
@@ -12,9 +12,7 @@
 }
 
 /* Spazio quando il banner è visibile per non coprire il footer */
-body.cn-has-banner { padding-bottom: var(--cn-bump, 120px); }
-
-.cn-hidden { display: none !important; }
+body.cn-has-banner { padding-bottom: var(--cn-bump, 140px); }
 
 .cn-banner {
   font-family: var(--cn-font);
@@ -44,8 +42,61 @@ body.cn-has-banner { padding-bottom: var(--cn-bump, 120px); }
   .cn-actions { justify-content: end; }
 }
 
-/* Pulsante chiudi (opzionale) */
+/* Pulsante chiudi */
 .cn-x {
   background: transparent; border: 0; color: #fff; font-size: 20px;
   cursor: pointer; line-height: 1; padding: 6px; margin-left: -6px;
+}
+
+/* ── Placeholder Google Maps ───────────────────────────────── */
+.map-container {
+  width: 100%;
+  height: 450px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #f0e8f5;
+  border: 2px dashed #A555EC;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.map-placeholder p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.map-consent-btn {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  background: #A555EC;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+@media (pointer: fine) {
+  .map-consent-btn:hover { background: #8e3fd4; }
 }
