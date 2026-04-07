@@ -48,6 +48,39 @@ body.cn-has-banner { padding-bottom: var(--cn-bump, 140px); }
   cursor: pointer; line-height: 1; padding: 6px; margin-left: -6px;
 }
 
+/* ── Floating button preferenze cookie ───────────────────── */
+.cn-pref-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2147482000;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: #A555EC;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(165, 85, 236, 0.45);
+  transition: background 0.2s, transform 0.15s, opacity 0.2s;
+  padding: 0;
+}
+
+@media (pointer: fine) {
+  .cn-pref-btn:hover {
+    background: #8e3fd4;
+    transform: scale(1.08);
+  }
+}
+
+.cn-pref-btn--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 /* ── Placeholder Google Maps ───────────────────────────────── */
 .map-container {
   width: 100%;

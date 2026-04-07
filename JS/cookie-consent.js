@@ -34,10 +34,41 @@
     container.appendChild(iframe);
   }
 
+  /* ── Floating button preferenze ─────────────────────────────
+     Creato una sola volta al caricamento della pagina.
+     Viene nascosto automaticamente quando il banner è visibile. */
+  function createPreferencesButton() {
+    if (document.getElementById('cn-pref-btn')) return;
+
+    const btn = document.createElement('button');
+    btn.id = 'cn-pref-btn';
+    btn.className = 'cn-pref-btn';
+    btn.setAttribute('aria-label', 'Gestisci preferenze cookie');
+    btn.setAttribute('title', 'Gestisci preferenze cookie');
+    btn.innerHTML = `
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+           width="22" height="22" aria-hidden="true">
+        <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/>
+        <path d="M8.5 8.5v.01" stroke-width="3"/>
+        <path d="M16 15.5v.01" stroke-width="3"/>
+        <path d="M12 12v.01" stroke-width="3"/>
+        <path d="M11 17v.01" stroke-width="3"/>
+        <path d="M7 14v.01" stroke-width="3"/>
+      </svg>
+    `;
+    btn.addEventListener('click', window.cemShowPreferences);
+    document.body.appendChild(btn);
+  }
+
   /* ── Banner ──────────────────────────────────────────────── */
   function createBanner() {
     // Evita banner duplicati
     if (document.querySelector('.cn-banner')) return;
+
+    // Nasconde il floating button mentre il banner è visibile
+    const prefBtn = document.getElementById('cn-pref-btn');
+    if (prefBtn) prefBtn.classList.add('cn-pref-btn--hidden');
 
     const wrap = document.createElement('div');
     wrap.className = 'cn-banner';
@@ -87,6 +118,9 @@
         }
       }
       wrap.remove();
+      // Rimostra il floating button dopo la chiusura del banner
+      const pb = document.getElementById('cn-pref-btn');
+      if (pb) pb.classList.remove('cn-pref-btn--hidden');
     };
 
     wrap.addEventListener('click', (e) => {
@@ -113,7 +147,8 @@
     try { return localStorage.getItem(TECH_KEY) === 'accepted'; } catch { return false; }
   };
 
-  if (!alreadyAccepted()) {
-    window.addEventListener('load', createBanner, { once: true });
-  }
+  window.addEventListener('load', () => {
+    createPreferencesButton();
+    if (!alreadyAccepted()) createBanner();
+  }, { once: true });
 })();
