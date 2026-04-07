@@ -107,7 +107,7 @@ h2 {
 /*          BARRA MENU          */
 /*  -------------------------   */
 .menu_bar_div {
-    color: #A555EC;
+    color: #8238c2;
     background-color: #F8E8EE;
     padding: 0px;
     font-size: 1rem;
@@ -146,10 +146,10 @@ h2 {
         display: inline-block;
         width: fit-content;
         text-decoration: none;
-        color: #A555EC;
+        color: #8238c2;
         -webkit-tap-highlight-color: transparent;   /* Per non far comparire il background blue dell'anchor tag */
     }
-    
+
     .laptop_ul li {
         display: inline-block;
         padding: 10px 20px;
@@ -302,7 +302,7 @@ h2 {
         display: block;
         width: fit-content;
         text-decoration: none;
-        color: #A555EC;
+        color: #8238c2;
         -webkit-tap-highlight-color: transparent;   /* Per non far comparire il background blue dell'anchor tag */
     }
 
@@ -500,7 +500,7 @@ svg {
 
 .find_more_button {
     background-color: #F8E8EE;
-    color:#A555EC;
+    color: #8238c2;
     border: 2px solid #A555EC;
     border-radius: 5px;
     font-size: 1rem;
