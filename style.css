@@ -1046,8 +1046,10 @@ video {
     cursor: pointer;
 }
 
-#cookie-banner button:hover {
-    background-color: #0056b3;
+@media (pointer: fine) {
+    #cookie-banner button:hover {
+        background-color: #0056b3;
+    }
 }
 
 .div-post {

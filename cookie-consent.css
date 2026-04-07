@@ -27,7 +27,8 @@ body.cn-has-banner { padding-bottom: var(--cn-bump, 140px); }
 .cn-banner h3 { margin: 0; font-size: 16px; font-weight: 700; }
 .cn-banner p  { margin: 0; font-size: 14px; color: var(--cn-muted); line-height: 1.45; }
 
-.cn-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+.cn-actions { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
+.cn-actions .cn-btn { width: 100%; text-align: center; }
 .cn-btn {
   appearance: none; border: 0; cursor: pointer; line-height: 1;
   padding: 10px 14px; border-radius: 10px; font-weight: 600; font-size: 14px;
@@ -39,7 +40,8 @@ body.cn-has-banner { padding-bottom: var(--cn-bump, 140px); }
 
 @media (min-width: 720px) {
   .cn-banner { grid-template-columns: 1fr auto; padding: 18px 20px; }
-  .cn-actions { justify-content: end; }
+  .cn-actions { flex-direction: row; justify-content: end; }
+  .cn-actions .cn-btn { width: auto; }
 }
 
 /* Pulsante chiudi */
