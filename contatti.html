@@ -6,15 +6,12 @@
     <title>CentroEsteticoMaristella</title>
     <link rel="stylesheet" href="./style.css"/>
     <link rel="stylesheet" href="./cookie-consent.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
 
     <!-- File Javascript -->
     <!-- Questi file devono rimanere qui in quanto altrimenti non funziona l'inclusione dell'header e del footer.
     Infatti, tale inclusione viene fatto utilizzando delle funzioni Javascript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./JS/jquery.min.js"></script>
     <script src="./JS/script.js"></script>
     <script src="./JS/cookie-consent.js"></script>
 </head>
@@ -137,7 +134,7 @@
                 <br>
 
                 <li>
-                    <a href="https://www.vcalendar.it/maristella/login">
+                    <a href="https://www.vcalendar.it/maristella/login" target="_blank" rel="noopener noreferrer">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
                             <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
                             <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
@@ -178,10 +175,21 @@
                 <img src="./images/facebook.svg" height="30">
             </a>
 
-            <div class="map-image"> 
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2805.764892765166!2d8.845910376187684!3d45.31317467107191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786fcc85dccd8f3%3A0x2016d17501f1b361!2sCentro%20Estetico%20Maristella!5e0!3m2!1sit!2sit!4v1697398639875!5m2!1sit!2sit" width="100%" height="600" style="border:0;" allowfullscreen="" loading="eager" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+            <div class="map-image">
+                <div id="mapContainer" class="map-container">
+                    <div class="map-placeholder">
+                        <p>La mappa è fornita da <strong>Google Maps</strong> (terza parte).<br>Per visualizzarla è necessario accettare i cookie di terze parti.</p>
+                        <button class="map-consent-btn">Carica la mappa</button>
+                        <p style="font-size:12px; color:#888;">Caricando la mappa accetti che Google possa raccogliere dati sul tuo dispositivo.<br>Consulta la <a href="./cookie-privacy-policy.html" style="color:#A555EC;">Cookie &amp; Privacy Policy</a>.</p>
+                    </div>
+                </div>
             </div>
+            <script>
+              window.addEventListener('load', function () {
+                var c = document.getElementById('mapContainer');
+                if (c && window.cemInitMap) window.cemInitMap(c);
+              });
+            </script>
         </div>
     </div>
 

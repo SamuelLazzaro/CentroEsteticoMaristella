@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookie Policy &amp; Privacy – Centro Estetico Maristella</title>
+  <style>
+    /* Font Alice self-hosted */
+    @font-face {
+      font-family: 'Alice';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('./fonts/alice-latin-ext.woff2') format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+                     U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF,
+                     U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    @font-face {
+      font-family: 'Alice';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('./fonts/alice-latin.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+                     U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+                     U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    :root {
+      --c-bg:        #F9F5F6;
+      --c-bg2:       #F8E8EE;
+      --c-card:      #ffffff;
+      --c-accent:    #A555EC;
+      --c-accent-lt: #b97af0;
+      --c-text:      #1a1a1a;
+      --c-text-mute: #5a5a5a;
+      --c-border:    rgba(165, 85, 236, 0.18);
+      --f-title:     'Alice', Georgia, serif;
+      --f-body:      system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      --max-w:       800px;
+      --radius:      12px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--f-body);
+      background: var(--c-bg);
+      color: var(--c-text);
+      min-height: 100vh;
+      line-height: 1.7;
+    }
+    a { color: var(--c-accent); text-decoration: underline; text-underline-offset: 3px; }
+    @media (pointer: fine) {
+      a:hover { color: var(--c-accent-lt); }
+    }
+
+    /* ── Header ───────────────────────────────────────────── */
+    .cp-header {
+      background: #ffffff;
+      border-bottom: 2px solid var(--c-border);
+      padding: 1.1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .cp-logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.25;
+      text-decoration: none;
+      color: inherit;
+    }
+    .cp-logo-title {
+      font-family: var(--f-title);
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--c-accent);
+    }
+    .cp-logo-sub {
+      font-size: 0.72rem;
+      color: var(--c-text-mute);
+      letter-spacing: 0.03em;
+    }
+    .cp-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 1rem;
+      background: var(--c-bg2);
+      border: 1px solid var(--c-border);
+      border-radius: 8px;
+      color: var(--c-accent);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    @media (pointer: fine) {
+      .cp-back-btn:hover { background: #edd5f8; }
+    }
+
+    /* ── Content ──────────────────────────────────────────── */
+    .cp-content {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+    .cp-tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--c-accent);
+      margin-bottom: 0.6rem;
+    }
+    .cp-title {
+      font-family: var(--f-title);
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+      color: var(--c-accent);
+    }
+    .cp-date {
+      font-size: 0.78rem;
+      color: var(--c-text-mute);
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── Sezioni ──────────────────────────────────────────── */
+    .cp-section {
+      background: var(--c-card);
+      border: 1px solid var(--c-border);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 1.25rem;
+    }
+    .cp-section h2 {
+      font-family: var(--f-title);
+      font-size: 0.95rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--c-accent);
+      margin-bottom: 0.75rem;
+    }
+    .cp-section p {
+      font-size: 0.88rem;
+      color: var(--c-text-mute);
+      margin-bottom: 0.6rem;
+    }
+    .cp-section p:last-child { margin-bottom: 0; }
+    .cp-section ul {
+      list-style: none;
+      margin-top: 0.5rem;
+    }
+    .cp-section ul li {
+      font-size: 0.85rem;
+      color: var(--c-text-mute);
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(165, 85, 236, 0.07);
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 0.75rem;
+      align-items: start;
+    }
+    .cp-section ul li:last-child { border-bottom: none; }
+    .cp-section ul li strong {
+      color: var(--c-text);
+      font-weight: 600;
+    }
+    .cp-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 4px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+    .cp-badge--on  { background: #dcfce7; color: #166534; }
+    .cp-badge--opt { background: #fef9c3; color: #854d0e; }
+
+    /* ── Footer ──────────────────────────────────────────── */
+    .cp-footer {
+      background: var(--c-bg2);
+      border-top: 1px solid var(--c-border);
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.72rem;
+      color: var(--c-text-mute);
+      letter-spacing: 0.03em;
+    }
+
+    @media (max-width: 560px) {
+      .cp-section ul li { grid-template-columns: 1fr; gap: 0.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="cp-header">
+    <a href="./index.html" class="cp-logo">
+      <span class="cp-logo-title">Centro Estetico Maristella</span>
+      <span class="cp-logo-sub">Corso Torino, n°21 – Vigevano (PV)</span>
+    </a>
+    <a href="./index.html" class="cp-back-btn">&#8592; Torna al sito</a>
+  </header>
+
+  <main class="cp-content">
+
+    <span class="cp-tag">Informativa</span>
+    <h1 class="cp-title">Cookie Policy &amp; Privacy</h1>
+    <p class="cp-date">Ultimo aggiornamento: aprile 2026</p>
+
+    <!-- 1. Titolare -->
+    <div class="cp-section">
+      <h2>1. Titolare del Trattamento</h2>
+      <p>
+        Il titolare del trattamento dei dati personali è <strong>Maddalena Berdicchia</strong>,
+        titolare del <strong>Centro Estetico Maristella</strong>, con sede in
+        Corso Torino, n°21 – 27029 Vigevano (PV) – P.IVA 02420430189.
+      </p>
+      <p>
+        Per qualsiasi richiesta relativa alla privacy è possibile contattarci all'indirizzo:
+        <a href="mailto:centroesteticomaristella@gmail.com">centroesteticomaristella@gmail.com</a>
+      </p>
+    </div>
+
+    <!-- 2. Cosa sono i cookie -->
+    <div class="cp-section">
+      <h2>2. Cosa sono i Cookie</h2>
+      <p>
+        I cookie sono piccoli file di testo salvati sul dispositivo dell'utente dal browser
+        durante la navigazione su un sito web. Questa informativa riguarda anche tecnologie
+        analoghe come il <strong>localStorage</strong>, un'area di memoria del browser
+        utilizzata da questo sito per memorizzare le preferenze dell'utente localmente,
+        senza trasmissione ai server del titolare.
+      </p>
+    </div>
+
+    <!-- 3. Cookie e storage tecnici -->
+    <div class="cp-section">
+      <h2>3. Cookie e Storage Tecnici Necessari</h2>
+      <p>
+        Questo sito utilizza esclusivamente le seguenti tecnologie tecniche, indispensabili
+        per il corretto funzionamento del sito. Sono sempre attive e non richiedono consenso
+        ai sensi dell'art. 122 del D.Lgs. 196/2003 e delle Linee Guida del Garante.
+      </p>
+      <ul>
+        <li>
+          <strong>cem-cookie-consent</strong>
+          <span>Registra l'avvenuta presa visione dell'informativa cookie e la scelta dell'utente. Durata: permanente fino alla cancellazione manuale. Tipo: localStorage.</span>
+        </li>
+        <li>
+          <strong>cem-maps-consent</strong>
+          <span>Registra il consenso specifico al caricamento di Google Maps. Durata: permanente fino alla cancellazione manuale. Tipo: localStorage.</span>
+        </li>
+        <li>
+          <strong>cookie_notice_ack</strong>
+          <span>Cookie tecnico di compatibilità che registra la presa visione dell'informativa. Durata: 365 giorni. Tipo: cookie HTTP (path: /).</span>
+        </li>
+      </ul>
+      <p style="margin-top: 0.75rem;">
+        Tutti i dati tecnici rimangono esclusivamente nel browser dell'utente e non vengono
+        mai trasmessi ai server del titolare.
+      </p>
+    </div>
+
+    <!-- 4. Terze parti -->
+    <div class="cp-section">
+      <h2>4. Servizi di Terze Parti</h2>
+
+      <p>
+        Il sito non utilizza Google Analytics, Facebook Pixel o qualsiasi altro strumento
+        di tracciamento comportamentale. Il font tipografico <em>Alice</em> e la libreria
+        JavaScript jQuery (v3.7.1) sono ospitati <strong>localmente sul server</strong> del
+        sito, senza alcuna richiesta a server di terze parti. L'unico servizio esterno
+        attivo è Google Maps, caricato esclusivamente previo consenso esplicito.
+      </p>
+
+      <p style="margin-top: 1rem;"><strong>Google Maps</strong> <span class="cp-badge cp-badge--opt">Solo previo consenso</span></p>
+      <p>
+        La pagina <em>Contatti</em> integra <strong>Google Maps</strong> (Google LLC, USA)
+        per visualizzare la posizione del centro. Questo servizio viene caricato
+        <strong>esclusivamente previo consenso esplicito</strong> dell'utente, espresso
+        tramite il banner cookie ("Accetta tutti") o direttamente cliccando il pulsante
+        "Carica la mappa" nella pagina Contatti. In assenza di consenso viene mostrato
+        un segnaposto statico senza alcuna richiesta a Google. Accettando, Google potrebbe
+        impostare i seguenti cookie:
+      </p>
+      <ul>
+        <li>
+          <strong>NID</strong>
+          <span>Cookie di preferenza e personalizzazione Google. Durata: ~6 mesi. Dominio: .google.com.</span>
+        </li>
+        <li>
+          <strong>CONSENT / SOCS</strong>
+          <span>Registra le scelte di consenso dell'utente per i servizi Google. Durata: variabile. Dominio: .google.com.</span>
+        </li>
+      </ul>
+      <p style="margin-top: 0.75rem;">
+        Per maggiori informazioni consultare la
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy di Google</a>.
+      </p>
+
+      <p style="margin-top: 1rem;"><strong>Sistema di prenotazione vcalendar.it</strong> <span class="cp-badge cp-badge--on">Link esterno</span></p>
+      <p>
+        Il link "Prenota un appuntamento" reindirizza l'utente al sito esterno
+        <strong>vcalendar.it</strong>. La navigazione su tale sito è interamente soggetta
+        alla privacy policy di vcalendar.it. Il titolare non ha alcun controllo sul
+        trattamento dei dati effettuato da tale piattaforma.
+      </p>
+    </div>
+
+    <!-- 5. Trasferimento extra-UE -->
+    <div class="cp-section">
+      <h2>5. Trasferimento dei Dati Extra-UE</h2>
+      <p>
+        Il sito non effettua trasferimenti di dati personali al di fuori dello Spazio
+        Economico Europeo durante la normale navigazione, in quanto font e librerie
+        JavaScript sono ospitati localmente.
+      </p>
+      <p>
+        L'unica eccezione riguarda <strong>Google Maps</strong> (Google LLC, USA),
+        caricato esclusivamente previo consenso esplicito dell'utente. Tale trasferimento
+        avviene nel rispetto delle garanzie previste dal GDPR (art. 46), in particolare
+        tramite le <strong>Clausole Contrattuali Standard</strong> (Standard Contractual
+        Clauses) e nell'ambito del <strong>Data Privacy Framework UE–USA</strong>
+        (decisione di adeguatezza della Commissione Europea del 10 luglio 2023).
+      </p>
+    </div>
+
+    <!-- 6. Dati raccolti direttamente -->
+    <div class="cp-section">
+      <h2>6. Dati Raccolti Direttamente dal Sito</h2>
+      <p>
+        Questo sito <strong>non raccoglie direttamente alcun dato personale</strong> degli
+        utenti. Non sono presenti moduli di contatto, registrazioni, iscrizioni a newsletter
+        o qualsiasi altro meccanismo che comporti l'invio di dati personali ai server del
+        titolare.
+      </p>
+      <p>
+        I recapiti (telefono, cellulare) presenti nella sezione <em>Contatti</em> sono
+        forniti a titolo informativo. Qualsiasi comunicazione avviata dall'utente tramite
+        tali canali è gestita al di fuori di questo sito web e soggetta alle politiche
+        privacy del servizio di telefonia utilizzato dall'utente.
+      </p>
+      <p>
+        I link ai profili social (Instagram, Facebook) sono semplici collegamenti ipertestuali
+        alle rispettive piattaforme: non sono presenti widget, pixel o embed che comportino
+        la trasmissione di dati a Meta o ad altri soggetti terzi durante la navigazione
+        su questo sito.
+      </p>
+    </div>
+
+    <!-- 7. Base giuridica -->
+    <div class="cp-section">
+      <h2>7. Base Giuridica del Trattamento</h2>
+      <p>
+        Il trattamento dei dati tramite <strong>cookie e storage tecnici</strong> è effettuato
+        sulla base del <strong>legittimo interesse</strong> del titolare (art. 6, par. 1,
+        lett. f del GDPR) e della necessità di fornire il servizio richiesto dall'utente,
+        poiché tali strumenti sono indispensabili per il funzionamento del sito.
+      </p>
+      <p>
+        Il trattamento dei dati tramite <strong>Google Maps</strong> è effettuato sulla
+        base del <strong>consenso esplicito</strong> dell'utente (art. 6, par. 1, lett. a
+        del GDPR), espresso attraverso l'apposito banner cookie o il pulsante nella pagina
+        Contatti. Il consenso può essere revocato in qualsiasi momento tramite il link
+        "Gestisci preferenze cookie" presente in fondo a ogni pagina del sito.
+      </p>
+    </div>
+
+    <!-- 8. Gestione consenso -->
+    <div class="cp-section">
+      <h2>8. Come Gestire il Consenso e i Cookie</h2>
+      <p>
+        L'utente può revocare o modificare il proprio consenso in qualsiasi momento
+        tramite il link <strong>"Gestisci preferenze cookie"</strong> presente nel
+        footer di ogni pagina del sito. Cliccando su tale link il banner cookie verrà
+        mostrato nuovamente, consentendo di modificare le scelte effettuate.
+      </p>
+      <p>
+        In alternativa, è possibile eliminare manualmente le voci
+        <code>cem-maps-consent</code> e <code>cem-cookie-consent</code> dal localStorage
+        del browser (Strumenti sviluppatore › Applicazione › Local Storage).
+        Al successivo accesso al sito il banner cookie verrà mostrato nuovamente.
+      </p>
+      <p>
+        In alternativa è possibile cancellare tutti i cookie e i dati di navigazione
+        dalle impostazioni del proprio browser. Si noti che questa operazione potrebbe
+        compromettere il corretto funzionamento di alcuni siti web.
+      </p>
+      <p>
+        Per maggiori informazioni su come gestire i cookie nei principali browser:
+        <a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer">Chrome</a>,
+        <a href="https://support.mozilla.org/it/kb/Eliminare%20i%20cookie" target="_blank" rel="noopener noreferrer">Firefox</a>,
+        <a href="https://support.apple.com/it-it/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer">Safari</a>,
+        <a href="https://support.microsoft.com/it-it/windows/eliminare-e-gestire-i-cookie-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" rel="noopener noreferrer">Edge</a>.
+      </p>
+    </div>
+
+    <!-- 9. Diritti -->
+    <div class="cp-section">
+      <h2>9. Diritti dell'Interessato</h2>
+      <p>
+        Ai sensi degli artt. 15–22 del GDPR (Reg. UE 2016/679) e del D.Lgs. 196/2003
+        (come modificato dal D.Lgs. 101/2018), l'utente ha il diritto di:
+      </p>
+      <ul>
+        <li><strong>Accesso</strong> <span>Ottenere conferma del trattamento e copia dei propri dati personali.</span></li>
+        <li><strong>Rettifica</strong> <span>Richiedere la correzione di dati inesatti o incompleti.</span></li>
+        <li><strong>Cancellazione</strong> <span>Richiedere la cancellazione dei dati ("diritto all'oblio").</span></li>
+        <li><strong>Limitazione</strong> <span>Richiedere la limitazione del trattamento in determinati casi.</span></li>
+        <li><strong>Opposizione</strong> <span>Opporsi al trattamento basato su legittimo interesse.</span></li>
+        <li><strong>Portabilità</strong> <span>Ricevere i propri dati in formato strutturato e leggibile da dispositivo automatico.</span></li>
+        <li><strong>Reclamo</strong> <span>Proporre reclamo al Garante per la Protezione dei Dati Personali: <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">www.garanteprivacy.it</a>.</span></li>
+      </ul>
+      <p style="margin-top: 0.75rem;">
+        Per esercitare i propri diritti contattare il titolare all'indirizzo:
+        <a href="mailto:centroesteticomaristella@gmail.com">centroesteticomaristella@gmail.com</a>
+      </p>
+    </div>
+
+    <!-- 10. Modifiche -->
+    <div class="cp-section">
+      <h2>10. Modifiche alla Policy</h2>
+      <p>
+        Il titolare si riserva il diritto di aggiornare la presente informativa in qualsiasi
+        momento per adeguarla a modifiche normative o cambiamenti nel funzionamento del sito.
+        Le modifiche saranno pubblicate su questa pagina con indicazione della data di
+        aggiornamento. Si invita a consultare periodicamente questa pagina.
+      </p>
+    </div>
+
+  </main>
+
+  <footer class="cp-footer">
+    &copy; 2025 Centro Estetico Maristella &middot; Corso Torino, n°21 – 27029 Vigevano (PV) &middot; P.IVA 02420430189
+  </footer>
+
+</body>
+</html>
