@@ -217,7 +217,7 @@
 
     <span class="cp-tag">Informativa</span>
     <h1 class="cp-title">Cookie Policy &amp; Privacy</h1>
-    <p class="cp-date">Ultimo aggiornamento: aprile 2026</p>
+    <p class="cp-date">Ultimo aggiornamento: maggio 2026</p>
 
     <!-- 1. Titolare -->
     <div class="cp-section">
@@ -280,9 +280,12 @@
       <p>
         Il sito non utilizza Google Analytics, Facebook Pixel o qualsiasi altro strumento
         di tracciamento comportamentale. Il font tipografico <em>Alice</em> e la libreria
-        JavaScript jQuery (v3.7.1) sono ospitati <strong>localmente sul server</strong> del
-        sito, senza alcuna richiesta a server di terze parti. L'unico servizio esterno
-        attivo è Google Maps, caricato esclusivamente previo consenso esplicito.
+        JavaScript jQuery (v3.7.1) sono serviti <strong>dalla stessa origine del sito</strong>,
+        senza alcuna richiesta a CDN o server di terze parti per il caricamento di tali
+        risorse. L'unico servizio esterno attivato dall'utente è Google Maps, caricato
+        esclusivamente previo consenso esplicito. Il sito è inoltre ospitato su
+        <strong>GitHub Pages</strong> con CDN <strong>Fastly</strong>: si veda il dettaglio
+        più sotto.
       </p>
 
       <p style="margin-top: 1rem;"><strong>Google Maps</strong> <span class="cp-badge cp-badge--opt">Solo previo consenso</span></p>
@@ -317,24 +320,69 @@
         alla privacy policy di vcalendar.it. Il titolare non ha alcun controllo sul
         trattamento dei dati effettuato da tale piattaforma.
       </p>
+
+      <p style="margin-top: 1rem;"><strong>Hosting e CDN: GitHub Pages &amp; Fastly</strong> <span class="cp-badge cp-badge--on">Sempre attivo</span></p>
+      <p>
+        Il sito è ospitato tramite <strong>GitHub Pages</strong> (GitHub, Inc. /
+        Microsoft Corporation, USA). Come parte dell'infrastruttura di distribuzione
+        dei contenuti, GitHub Pages si avvale di <strong>Fastly CDN</strong>
+        (Fastly, Inc., USA). Questi servizi elaborano automaticamente dati tecnici
+        degli utenti nell'ambito della normale erogazione del servizio di hosting,
+        indipendentemente dal consenso ai cookie:
+      </p>
+      <ul>
+        <li>
+          <strong>GitHub Pages</strong>
+          <span>Hosting e distribuzione di tutti i contenuti statici del sito. Elabora log tecnici (indirizzo IP, user-agent, URL richiesti, timestamp) per l'erogazione del servizio. Dominio: github.io / pages.github.com.</span>
+        </li>
+        <li>
+          <strong>Fastly CDN</strong>
+          <span>Rete di distribuzione dei contenuti (CDN) utilizzata da GitHub Pages. Elabora gli stessi dati tecnici nel percorso di rete. Dominio: fastly.com.</span>
+        </li>
+      </ul>
+      <p style="margin-top: 0.75rem;">
+        Né GitHub Pages né Fastly impostano cookie nel browser dell'utente per
+        l'erogazione del sito statico; il trattamento riguarda esclusivamente i log
+        tecnici di accesso. Per ulteriori informazioni consultare la
+        <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">Privacy Policy di GitHub</a>
+        e la
+        <a href="https://www.fastly.com/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy di Fastly</a>.
+      </p>
     </div>
 
     <!-- 5. Trasferimento extra-UE -->
     <div class="cp-section">
       <h2>5. Trasferimento dei Dati Extra-UE</h2>
       <p>
-        Il sito non effettua trasferimenti di dati personali al di fuori dello Spazio
-        Economico Europeo durante la normale navigazione, in quanto font e librerie
-        JavaScript sono ospitati localmente.
+        Poiché il sito è ospitato su <strong>GitHub Pages</strong> con CDN
+        <strong>Fastly</strong>, durante la normale navigazione i dati tecnici dell'utente
+        (in particolare l'indirizzo IP) possono essere trasferiti negli <strong>Stati
+        Uniti</strong> e in altri paesi al di fuori dello Spazio Economico Europeo,
+        nell'ambito dell'erogazione del servizio di hosting.
       </p>
       <p>
-        L'unica eccezione riguarda <strong>Google Maps</strong> (Google LLC, USA),
-        caricato esclusivamente previo consenso esplicito dell'utente. Tale trasferimento
-        avviene nel rispetto delle garanzie previste dal GDPR (art. 46), in particolare
-        tramite le <strong>Clausole Contrattuali Standard</strong> (Standard Contractual
-        Clauses) e nell'ambito del <strong>Data Privacy Framework UE–USA</strong>
-        (decisione di adeguatezza della Commissione Europea del 10 luglio 2023).
+        Un ulteriore trasferimento avviene, previo consenso esplicito dell'utente,
+        per il caricamento di <strong>Google Maps</strong> (Google LLC, USA) nella
+        sezione Contatti.
       </p>
+      <p style="margin-top: 0.75rem;">
+        Tali trasferimenti avvengono nel rispetto delle garanzie previste dal GDPR
+        (art. 46), in particolare:
+      </p>
+      <ul>
+        <li>
+          <strong>GitHub, Inc.</strong>
+          <span>Certificata nell'ambito del <strong>Data Privacy Framework UE–USA</strong> (decisione di adeguatezza della Commissione Europea del 10 luglio 2023).</span>
+        </li>
+        <li>
+          <strong>Fastly, Inc.</strong>
+          <span>Adotta le <strong>Clausole Contrattuali Standard</strong> (Standard Contractual Clauses) per i trasferimenti extra-SEE.</span>
+        </li>
+        <li>
+          <strong>Google LLC</strong>
+          <span>Certificata nell'ambito del <strong>Data Privacy Framework UE–USA</strong> e adotta le <strong>Clausole Contrattuali Standard</strong>.</span>
+        </li>
+      </ul>
     </div>
 
     <!-- 6. Dati raccolti direttamente -->
@@ -357,6 +405,15 @@
         alle rispettive piattaforme: non sono presenti widget, pixel o embed che comportino
         la trasmissione di dati a Meta o ad altri soggetti terzi durante la navigazione
         su questo sito.
+      </p>
+      <p style="margin-top: 0.75rem;">
+        Il sito è ospitato su <strong>GitHub Pages</strong>, che insieme alla CDN
+        <strong>Fastly</strong> raccoglie automaticamente dati tecnici di accesso
+        (indirizzo IP, tipo di browser, pagine visitate, timestamp) nell'ambito del
+        normale funzionamento del servizio di hosting. Tali dati sono gestiti
+        direttamente da GitHub e Fastly secondo le rispettive privacy policy e
+        conservati per il periodo previsto dai rispettivi provider; il titolare del
+        sito non vi ha accesso diretto.
       </p>
     </div>
 
@@ -443,7 +500,7 @@
   </main>
 
   <footer class="cp-footer">
-    &copy; 2025 Centro Estetico Maristella &middot; Corso Torino, n°21 – 27029 Vigevano (PV) &middot; P.IVA 02420430189
+    &copy; 2026 Centro Estetico Maristella &middot; Corso Torino, n°21 – 27029 Vigevano (PV) &middot; P.IVA 02420430189
   </footer>
 
 </body>
