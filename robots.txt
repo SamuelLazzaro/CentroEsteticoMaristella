@@ -1,0 +1,8 @@
+# robots.txt for https://centroesteticomaristella.it
+
+User-agent: *
+Allow: /
+Disallow: /docs/
+Disallow: /build/
+
+Sitemap: https://centroesteticomaristella.it/sitemap.xml
