@@ -974,7 +974,7 @@ proprieta' di hover ha dei problemi con i dispositivi touch screen */
 
 .div_video_horizontal {
     margin: 20px;
-    aspect-ratio: 16/9;
+    /* aspect-ratio: 16/9; */
 }
 
 .div_video_vertical {
