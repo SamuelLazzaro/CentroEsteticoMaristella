@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Sicurezza e minimizzazione dei dati inviati a terze parti -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; media-src 'self'; connect-src 'self'; frame-src https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'none'">
     <meta name="robots" content="index, follow">
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <title>Contatti, Orari e Indirizzo – Centro Estetico Maristella Vigevano</title>
@@ -195,21 +198,17 @@
                 <img src="./images/facebook.svg" height="30" alt="Facebook">
             </a>
 
+            <!-- Segnaposto della mappa: l'iframe di Google non è presente qui e
+            viene creato da JS/cookie-consent.js solo dopo il consenso esplicito -->
             <div class="map-image">
                 <div id="mapContainer" class="map-container">
                     <div class="map-placeholder">
                         <p>La mappa è fornita da <strong>Google Maps</strong> (terza parte).<br>Per visualizzarla è necessario accettare i cookie di terze parti.</p>
-                        <button class="map-consent-btn">Carica la mappa</button>
-                        <p style="font-size:12px; color:#888;">Caricando la mappa accetti che Google possa raccogliere dati sul tuo dispositivo.<br>Consulta la <a href="./cookie-privacy-policy.html" style="color:#A555EC;">Cookie &amp; Privacy Policy</a>.</p>
+                        <button class="map-consent-btn" type="button">Carica la mappa</button>
+                        <p class="map-placeholder-note">Caricando la mappa accetti che Google possa raccogliere dati sul tuo dispositivo.<br>Consulta la <a href="./cookie-privacy-policy.html">Privacy &amp; Cookie Policy</a>.</p>
                     </div>
                 </div>
             </div>
-            <script>
-              window.addEventListener('load', function () {
-                var c = document.getElementById('mapContainer');
-                if (c && window.cemInitMap) window.cemInitMap(c);
-              });
-            </script>
         </div>
     </div>
 

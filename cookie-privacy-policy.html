@@ -3,9 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Sicurezza e minimizzazione dei dati inviati a terze parti -->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; media-src 'self'; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'" />
   <meta name="robots" content="noindex, follow" />
   <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
-  <title>Cookie Policy &amp; Privacy – Centro Estetico Maristella</title>
+  <title>Privacy &amp; Cookie Policy – Centro Estetico Maristella</title>
+
+  <!-- Banner e pulsante di revoca del consenso: devono essere disponibili anche
+  qui, perché questa è la pagina linkata dal banner stesso e la revoca va
+  raggiungibile da ogni pagina del sito -->
+  <link rel="stylesheet" href="./cookie-consent.css" />
+  <script src="./JS/cookie-consent.js"></script>
+
   <style>
     /* Font Alice self-hosted */
     @font-face {
@@ -218,8 +228,8 @@
   <main class="cp-content">
 
     <span class="cp-tag">Informativa</span>
-    <h1 class="cp-title">Cookie Policy &amp; Privacy</h1>
-    <p class="cp-date">Ultimo aggiornamento: maggio 2026</p>
+    <h1 class="cp-title">Privacy &amp; Cookie Policy</h1>
+    <p class="cp-date">Ultimo aggiornamento: luglio 2026</p>
 
     <!-- 1. Titolare -->
     <div class="cp-section">
@@ -251,9 +261,10 @@
     <div class="cp-section">
       <h2>3. Cookie e Storage Tecnici Necessari</h2>
       <p>
-        Questo sito utilizza esclusivamente le seguenti tecnologie tecniche, indispensabili
-        per il corretto funzionamento del sito. Sono sempre attive e non richiedono consenso
-        ai sensi dell'art. 122 del D.Lgs. 196/2003 e delle Linee Guida del Garante.
+        Questo sito <strong>non imposta alcun cookie HTTP</strong>. Utilizza esclusivamente
+        le due voci di localStorage elencate qui sotto, indispensabili per registrare le
+        scelte dell'utente. Sono sempre attive e non richiedono consenso ai sensi
+        dell'art. 122 del D.Lgs. 196/2003 e delle Linee Guida del Garante.
       </p>
       <ul>
         <li>
@@ -264,14 +275,17 @@
           <strong>cem-maps-consent</strong>
           <span>Registra il consenso specifico al caricamento di Google Maps. Durata: permanente fino alla cancellazione manuale. Tipo: localStorage.</span>
         </li>
-        <li>
-          <strong>cookie_notice_ack</strong>
-          <span>Cookie tecnico di compatibilità che registra la presa visione dell'informativa. Durata: 365 giorni. Tipo: cookie HTTP (path: /).</span>
-        </li>
       </ul>
       <p style="margin-top: 0.75rem;">
         Tutti i dati tecnici rimangono esclusivamente nel browser dell'utente e non vengono
         mai trasmessi ai server del titolare.
+      </p>
+      <p>
+        Versioni precedenti del banner impostavano due cookie tecnici
+        (<code>cookie_notice_ack</code> e <code>cookie_accepted</code>). Non sono più
+        utilizzati: se presenti nel browser da visite passate, vengono
+        <strong>fatti scadere automaticamente</strong> al primo caricamento di una
+        qualsiasi pagina del sito.
       </p>
     </div>
 
@@ -281,13 +295,19 @@
 
       <p>
         Il sito non utilizza Google Analytics, Facebook Pixel o qualsiasi altro strumento
-        di tracciamento comportamentale. Il font tipografico <em>Alice</em> e la libreria
-        JavaScript jQuery (v3.7.1) sono serviti <strong>dalla stessa origine del sito</strong>,
-        senza alcuna richiesta a CDN o server di terze parti per il caricamento di tali
-        risorse. L'unico servizio esterno attivato dall'utente è Google Maps, caricato
-        esclusivamente previo consenso esplicito. Il sito è inoltre ospitato su
-        <strong>GitHub Pages</strong> con CDN <strong>Fastly</strong>: si veda il dettaglio
-        più sotto.
+        di tracciamento comportamentale. L'unico servizio esterno attivabile dall'utente è
+        Google Maps, caricato esclusivamente previo consenso esplicito. Il sito è inoltre
+        ospitato su <strong>GitHub Pages</strong> con CDN <strong>Fastly</strong>: si veda
+        il dettaglio più sotto.
+      </p>
+
+      <p style="margin-top: 1rem;"><strong>Font e librerie: nessuna CDN esterna</strong> <span class="cp-badge cp-badge--on">Nessun dato a terzi</span></p>
+      <p>
+        Il font tipografico <em>Alice</em>, la libreria JavaScript jQuery (v3.7.1), tutte le
+        immagini, le icone e i video sono serviti <strong>dalla stessa origine del sito</strong>.
+        Non vengono effettuate richieste a Google Fonts, jsDelivr, cdnjs o ad alcun'altra rete
+        di distribuzione esterna: il caricamento di queste risorse
+        <strong>non comporta alcuna trasmissione di dati a terze parti</strong>.
       </p>
 
       <p style="margin-top: 1rem;"><strong>Google Maps</strong> <span class="cp-badge cp-badge--opt">Solo previo consenso</span></p>
@@ -297,8 +317,10 @@
         <strong>esclusivamente previo consenso esplicito</strong> dell'utente, espresso
         tramite il banner cookie ("Accetta tutti") o direttamente cliccando il pulsante
         "Carica la mappa" nella pagina Contatti. In assenza di consenso viene mostrato
-        un segnaposto statico senza alcuna richiesta a Google. Accettando, Google potrebbe
-        impostare i seguenti cookie:
+        un segnaposto statico senza alcuna richiesta a Google. Al caricamento della mappa
+        viene trasmessa a Google la sola origine del sito
+        (<code>centroesteticomaristella.it</code>) e non l'indirizzo completo della pagina
+        visitata. Accettando, Google potrebbe impostare i seguenti cookie:
       </p>
       <ul>
         <li>
@@ -311,8 +333,14 @@
         </li>
       </ul>
       <p style="margin-top: 0.75rem;">
-        Per maggiori informazioni consultare la
-        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy di Google</a>.
+        <strong>Conservazione:</strong> Google non pubblica un periodo di conservazione
+        specifico per l'integrazione Maps. Nella propria informativa sulla conservazione dei
+        dati dichiara di anonimizzare i dati pubblicitari nei log dei server rimuovendo parte
+        dell'indirizzo IP <strong>dopo 9 mesi</strong> e le informazioni contenute nei cookie
+        <strong>dopo 18 mesi</strong>. Per maggiori informazioni consultare la
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy di Google</a>
+        e la relativa
+        <a href="https://policies.google.com/technologies/retention" target="_blank" rel="noopener noreferrer">informativa sulla conservazione dei dati</a>.
       </p>
 
       <p style="margin-top: 1rem;"><strong>Sistema di prenotazione vcalendar.it</strong> <span class="cp-badge cp-badge--on">Link esterno</span></p>
@@ -345,7 +373,19 @@
       <p style="margin-top: 0.75rem;">
         Né GitHub Pages né Fastly impostano cookie nel browser dell'utente per
         l'erogazione del sito statico; il trattamento riguarda esclusivamente i log
-        tecnici di accesso. Per ulteriori informazioni consultare la
+        tecnici di accesso. La documentazione di GitHub Pages indica che
+        «l'indirizzo IP del visitatore viene registrato e conservato per finalità di
+        sicurezza».
+      </p>
+      <p style="margin-top: 0.75rem;">
+        <strong>Conservazione:</strong> né GitHub né Fastly pubblicano una durata fissa per i
+        log di accesso. GitHub dichiara di conservare i dati personali «per il tempo in cui
+        l'account è attivo e per quanto necessario ad adempiere obblighi contrattuali,
+        rispettare requisiti di legge, risolvere controversie e far valere gli accordi»;
+        Fastly indica criteri analoghi e rimanda ai propri termini di trattamento dei dati.
+        Non essendo il titolare del sito parte di tali contratti né avendo accesso a quei
+        log, non è in grado di indicare una durata più precisa di quella dichiarata dai
+        fornitori. Per ulteriori informazioni consultare la
         <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">Privacy Policy di GitHub</a>
         e la
         <a href="https://www.fastly.com/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy di Fastly</a>.
@@ -378,13 +418,23 @@
         </li>
         <li>
           <strong>Fastly, Inc.</strong>
-          <span>Adotta le <strong>Clausole Contrattuali Standard</strong> (Standard Contractual Clauses) per i trasferimenti extra-SEE.</span>
+          <span>Auto-certificata nell'ambito del <strong>Data Privacy Framework UE–USA</strong> con effetto dall'8 agosto 2023, e adotta le <strong>Clausole Contrattuali Standard</strong> per i trasferimenti non coperti dalla certificazione.</span>
         </li>
         <li>
           <strong>Google LLC</strong>
           <span>Certificata nell'ambito del <strong>Data Privacy Framework UE–USA</strong> e adotta le <strong>Clausole Contrattuali Standard</strong>.</span>
         </li>
       </ul>
+      <p style="margin-top: 0.75rem;">
+        Le certificazioni possono essere verificate nell'elenco ufficiale del Dipartimento
+        del Commercio statunitense
+        (<a href="https://www.dataprivacyframework.gov/list" target="_blank" rel="noopener noreferrer">dataprivacyframework.gov</a>);
+        le dichiarazioni dei singoli fornitori sono pubblicate da
+        <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub</a>,
+        <a href="https://www.fastly.com/data-privacy-framework" target="_blank" rel="noopener noreferrer">Fastly</a>
+        e
+        <a href="https://policies.google.com/privacy/frameworks" target="_blank" rel="noopener noreferrer">Google</a>.
+      </p>
     </div>
 
     <!-- 6. Dati raccolti direttamente -->
@@ -413,9 +463,10 @@
         <strong>Fastly</strong> raccoglie automaticamente dati tecnici di accesso
         (indirizzo IP, tipo di browser, pagine visitate, timestamp) nell'ambito del
         normale funzionamento del servizio di hosting. Tali dati sono gestiti
-        direttamente da GitHub e Fastly secondo le rispettive privacy policy e
-        conservati per il periodo previsto dai rispettivi provider; il titolare del
-        sito non vi ha accesso diretto.
+        direttamente da GitHub e Fastly secondo le rispettive privacy policy; il titolare
+        del sito <strong>non vi ha accesso</strong> e non riceve alcuna statistica di
+        traffico. I periodi di conservazione dichiarati dai due fornitori sono indicati
+        al punto 4.
       </p>
     </div>
 
@@ -423,17 +474,24 @@
     <div class="cp-section">
       <h2>7. Base Giuridica del Trattamento</h2>
       <p>
-        Il trattamento dei dati tramite <strong>cookie e storage tecnici</strong> è effettuato
-        sulla base del <strong>legittimo interesse</strong> del titolare (art. 6, par. 1,
-        lett. f del GDPR) e della necessità di fornire il servizio richiesto dall'utente,
-        poiché tali strumenti sono indispensabili per il funzionamento del sito.
+        Lo <strong>storage tecnico</strong> descritto al punto 3 è strettamente necessario a
+        erogare il servizio richiesto dall'utente e a dare seguito alla scelta espressa sul
+        banner: come tale non richiede consenso ai sensi dell'art. 122 del D.Lgs. 196/2003.
+        La registrazione della scelta risponde inoltre all'obbligo di poter dimostrare il
+        consenso previsto dall'art. 7, par. 1 del GDPR.
       </p>
       <p>
         Il trattamento dei dati tramite <strong>Google Maps</strong> è effettuato sulla
         base del <strong>consenso esplicito</strong> dell'utente (art. 6, par. 1, lett. a
         del GDPR), espresso attraverso l'apposito banner cookie o il pulsante nella pagina
-        Contatti. Il consenso può essere revocato in qualsiasi momento tramite il link
-        "Gestisci preferenze cookie" presente in fondo a ogni pagina del sito.
+        Contatti. Il consenso può essere revocato in qualsiasi momento tramite il
+        <strong>pulsante cookie</strong> fisso in basso a destra di ogni pagina del sito.
+      </p>
+      <p>
+        I <strong>log tecnici di accesso</strong> raccolti da GitHub Pages e Fastly per
+        l'erogazione dell'hosting e per finalità di sicurezza (punto 4) sono trattati sulla
+        base del <strong>legittimo interesse</strong> a rendere disponibile e sicuro il sito
+        (art. 6, par. 1, lett. f del GDPR).
       </p>
     </div>
 
@@ -443,8 +501,9 @@
       <p>
         L'utente può revocare o modificare il proprio consenso in qualsiasi momento
         tramite il <strong>pulsante cookie</strong> fisso in basso a destra di ogni pagina
-        del sito (icona cookie viola). Cliccandolo il banner verrà mostrato nuovamente,
-        consentendo di modificare le scelte effettuate.
+        del sito (icona cookie viola). Cliccandolo, le scelte salvate vengono azzerate, la
+        mappa di Google eventualmente già caricata viene <strong>rimossa immediatamente</strong>
+        dalla pagina e il banner viene mostrato di nuovo per permettere una nuova scelta.
       </p>
       <p>
         In alternativa, è possibile eliminare manualmente le voci

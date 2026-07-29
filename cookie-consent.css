@@ -1,10 +1,12 @@
-/* Cookie Notice – v3.0 – tecnici + Google Maps, con body bump */
+/* Cookie Notice – v3.1 – tecnici + Google Maps, con body bump */
 :root {
   --cn-bg: #111827;
   --cn-fg: #ffffff;
   --cn-muted: #9ca3af;
   --cn-accent: #60a5fa;
-  --cn-ok: #10b981;
+  /* Tinte dei due pulsanti di scelta: vedi nota sulla pari prominenza */
+  --cn-accept: #047857;
+  --cn-reject: #6b7280;
   --cn-radius: 14px;
   --cn-shadow: 0 10px 24px rgba(0,0,0,.25);
   --cn-z: 2147483000;
@@ -33,10 +35,38 @@ body.cn-has-banner { padding-bottom: var(--cn-bump, 140px); }
   appearance: none; border: 0; cursor: pointer; line-height: 1;
   padding: 10px 14px; border-radius: 10px; font-weight: 600; font-size: 14px;
 }
-.cn-btn-primary { background: var(--cn-ok); color: #fff; }
-.cn-btn-ghost   { background: transparent; border: 1px solid #374151; color: #fff; }
+
+/* Pari prominenza fra accettazione e rifiuto (EDPB 3/2022): i due pulsanti
+   condividono classe .cn-btn, quindi dimensioni, padding, raggio e peso
+   tipografico sono identici; cambia solo la tinta. Entrambi hanno una
+   superficie piena, così nessuna delle due scelte appare come semplice testo.
+   Le tinte sono scelte per superare i minimi WCAG 2.1 sia rispetto allo sfondo
+   del banner (#111827, minimo 3:1 per componenti UI) sia rispetto al testo
+   bianco (minimo 4.5:1):
+     --cn-accept #047857  ->  3.24:1 su sfondo, 5.48:1 con il testo
+     --cn-reject #6b7280  ->  3.67:1 su sfondo, 4.84:1 con il testo */
+.cn-btn-accept {
+    background: var(--cn-accept);
+    color: var(--cn-fg);
+}
+
+.cn-btn-reject {
+    background: var(--cn-reject);
+    color: var(--cn-fg);
+}
 
 .cn-link { color: var(--cn-accent); text-decoration: underline; text-underline-offset: 2px; }
+
+/* Indicatore di focus da tastiera: il banner è un dialogo raggiungibile solo
+   da tastiera dopo lo spostamento programmatico del focus, quindi serve un
+   contorno visibile su tutti i suoi elementi interattivi. */
+.cn-banner:focus-visible,
+.cn-banner button:focus-visible,
+.cn-banner a:focus-visible,
+.cn-pref-btn:focus-visible {
+    outline: 3px solid var(--cn-accent);
+    outline-offset: 2px;
+}
 
 @media (min-width: 720px) {
   .cn-banner { grid-template-columns: 1fr auto; padding: 18px 20px; }
@@ -117,6 +147,19 @@ body.cn-has-banner { padding-bottom: var(--cn-bump, 140px); }
   font-size: 14px;
   color: #555;
   line-height: 1.5;
+}
+
+/* Nota di dettaglio sotto il pulsante di consenso: spiega quali dati vengono
+   inviati a Google, quindi va letta prima del click ma senza competere con il
+   testo principale del segnaposto. Non imposta un colore proprio: eredita il
+   #555 di .map-placeholder p, che sullo sfondo del segnaposto dà 6.24:1
+   contro i 3.02:1 del #888 usato in precedenza (sotto il minimo WCAG). */
+.map-placeholder-note {
+    font-size: 12px;
+}
+
+.map-placeholder a {
+    color: #A555EC;
 }
 
 .map-consent-btn {
