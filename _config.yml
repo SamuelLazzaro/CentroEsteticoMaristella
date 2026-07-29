@@ -1,0 +1,18 @@
+# Configurazione di GitHub Pages.
+#
+# `exclude` elenca i file di lavoro interni che non devono finire nel sito
+# pubblicato. Senza questa voce GitHub Pages li serve come qualsiasi altro file
+# del repository, rendendoli scaricabili da chiunque conosca il percorso
+# (es. https://centroesteticomaristella.it/TODO.txt): non sono dati personali,
+# ma non c'è motivo di esporre appunti e istruzioni di sviluppo.
+#
+# I file e le cartelle che iniziano con un punto sono già esclusi da Jekyll;
+# sono elencati comunque per rendere esplicito l'intento.
+exclude:
+  - CLAUDE.md
+  - README.md
+  - TODO.txt
+  - docs
+  - build
+  - .vscode
+  - .claude
