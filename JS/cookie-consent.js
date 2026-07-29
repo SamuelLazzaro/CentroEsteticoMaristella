@@ -83,16 +83,6 @@ const replaceWithIframe = (container) => {
 };
 
 /**
- * Collega il pulsante di consenso di un placeholder.
- * @param {HTMLElement} container Contenitore .map-container
- * @returns {void}
- */
-const bindConsentButton = (container) => {
-  const btn = container.querySelector('.map-consent-btn');
-  if (btn) btn.addEventListener('click', grantMapsConsent);
-};
-
-/**
  * Carica la mappa in tutti i contenitori della pagina. Il consenso è per
  * servizio e non per singolo placeholder: accettando da un punto qualsiasi
  * (banner o placeholder) devono attivarsi tutte le istanze.
@@ -102,6 +92,25 @@ const loadAllMaps = () => {
   document.querySelectorAll('.map-container').forEach((container) => {
     if (!container.querySelector('iframe')) replaceWithIframe(container);
   });
+};
+
+/**
+ * Registra il consenso a Google Maps e carica subito tutte le mappe.
+ * @returns {void}
+ */
+const grantMapsConsent = () => {
+  grant(MAPS_KEY);
+  loadAllMaps();
+};
+
+/**
+ * Collega il pulsante di consenso di un placeholder.
+ * @param {HTMLElement} container Contenitore .map-container
+ * @returns {void}
+ */
+const bindConsentButton = (container) => {
+  const btn = container.querySelector('.map-consent-btn');
+  if (btn) btn.addEventListener('click', grantMapsConsent);
 };
 
 /**
@@ -117,15 +126,6 @@ const unloadAllMaps = () => {
     container.innerHTML = markup;
     bindConsentButton(container);
   });
-};
-
-/**
- * Registra il consenso a Google Maps e carica subito tutte le mappe.
- * @returns {void}
- */
-const grantMapsConsent = () => {
-  grant(MAPS_KEY);
-  loadAllMaps();
 };
 
 /**
@@ -221,12 +221,6 @@ const createBanner = () => {
   setBump();
   window.addEventListener('resize', setBump);
 
-  /* Esc equivale al rifiuto: chiude il banner registrando solo i cookie
-     tecnici, mai un consenso implicito alle terze parti. */
-  const onKeyDown = (e) => {
-    if (e.key === 'Escape') closeBanner(false);
-  };
-
   const closeBanner = (acceptMaps) => {
     window.removeEventListener('resize', setBump);
     document.removeEventListener('keydown', onKeyDown);
@@ -246,6 +240,15 @@ const createBanner = () => {
       pb.focus({ preventScroll: true });
     }
   };
+
+  /* Esc equivale al rifiuto: chiude il banner registrando solo i cookie
+     tecnici, mai un consenso implicito alle terze parti.
+     Dichiarato con `function` e non come arrow const perché closeBanner, che è
+     definito sopra, deve poterlo passare a removeEventListener: essendo
+     hoistato è già visibile lì, senza riferimenti in avanti. */
+  function onKeyDown(e) {
+    if (e.key === 'Escape') closeBanner(false);
+  }
 
   document.addEventListener('keydown', onKeyDown);
 
